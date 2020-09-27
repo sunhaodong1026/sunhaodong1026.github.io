@@ -18,8 +18,9 @@
 <meta property="og:description" content="css 基础全称:cascading style sheets 汉译:层叠样式表表 WEB 标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网信息的显示样式。目前推荐遵循的是 W3C 发布的 CSS3.0">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-27T03:11:24.000Z">
-<meta property="article:modified_time" content="2020-09-27T03:23:29.691Z">
+<meta property="article:modified_time" content="2020-09-27T08:29:13.834Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
@@ -79,6 +80,8 @@
 </a>
     
     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
   </div>
   
     <span id="busuanzi_container_page_pv">
@@ -100,19 +103,19 @@
 <ol>
 <li>内部样式表</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  /* css语句 */</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  /* css语句 */</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>方法二:<br>内联样式<br><code>&lt;标签 style=&quot;属性:属性值; 属性:属性值;&quot;&gt;&lt;/标签&gt;</code><br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div style=<span class="string">&quot;width:100px; height:100px; border:1px solid #eee; background:#fff;&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div style=<span class="string">&quot;width:100px; height:100px; border:1px solid #eee; background:#fff;&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>方法三：<br>外部样式表<br>引用外部样式表文件</p>
 <ol>
 <li>使用 Link 标签引入</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span> <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span> href=<span class="string">&quot;目标文件的路径及文件名全称&quot;</span> /&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span> <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span> href=<span class="string">&quot;目标文件的路径及文件名全称&quot;</span> /&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>说明：使用 link 元素导入外部样式表时，需将该元素写在文档头部，即与之间。<br>rel：用于定义文档关联，表示关联样式表；<br>type：定义文档类型； 2. 使用@import 引入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  @import url(目标文件的路径及文件名全称);</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  @import url(目标文件的路径及文件名全称);</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>注：@和 import 之间没有空格,url 和小括号之间也没有空格,必须结尾以分号结束;</p>
 <p><strong><em>link 和 import 导入样式的区别</em></strong></p>
@@ -134,7 +137,7 @@
 <li>元素选择符/类型选择符</li>
 </ol>
 <p>元素名称 { 属性：属性值；} 如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">p &#123;</span><br><span class="line"></span><br><span class="line">background: red;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">p &#123;</span><br><span class="line"></span><br><span class="line">background: red;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>说明：<br>① 元素选择符即使用结构中元素名称作为选择符。<br>如 body、div、p,img,em,strong,span……等。<br>② 所有的页面元素都可以作为选择符;<br>③ 使用元素选择器，会把文档中所有的标签都加相同的样式;<br>如：a｛background:red｝ 所有 a 的背景颜色都是红色</p>
 <ol>
@@ -146,13 +149,13 @@
 <li>class 选择器/class 选择符<br>.class 名{属性:属性值;}</li>
 </ol>
 <p>说明：<br>① 使用类选择符时需为元素定义一个 class 属性；<br>如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div class=<span class="string">&quot;top&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div class=<span class="string">&quot;top&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>② 一个 class 属性可以起多个名字；<br>如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;p class=<span class="string">&quot;box main&quot;</span>&gt;&lt;/p&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;p class=<span class="string">&quot;box main&quot;</span>&gt;&lt;/p&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>扩展：div.box{background:red;} 指定选择器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;box&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=<span class="string">&quot;box&quot;</span>&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;box&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=<span class="string">&quot;box&quot;</span>&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure></div>
 
 <p>只会给 class 名为 box 的 div 标签加样式</p>
 <ol>
@@ -176,10 +179,10 @@
 <hr>
 <p>选择符的权重<br>css 中用四位数字表示权重，权重的表达方式如：0,0,0,0<br>类型选择符的权重：0001<br>class 选择符的权重：0010<br>id 选择符的权重：0100<br>子选择符的权重：0000<br>属性选择符的权重：0010<br>伪类选择符的权重：0010<br>伪元素选择符的权重：0010<br>包含选择符的权重：包含的选择符权重值之和<br>内联样式的权重：1000<br>继承样式的权重：0000</p>
 <h3 id="注释的写法"><a href="#注释的写法" class="headerlink" title="注释的写法"></a>注释的写法</h3><p>HTML 注释</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 注释的内容 --&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 注释的内容 --&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>CSS 的注释</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/* 注释内容 */</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/* 注释内容 */</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>注: 注释的快捷键 Ctrl + ? 键 或者 Alt + Shift + A</p>
 
@@ -259,9 +262,23 @@ gitment.render('gitmentContainer')
 
   
     
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-box">
