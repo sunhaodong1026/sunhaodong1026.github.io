@@ -171,7 +171,8 @@ html, body, #fullpage {
 }
 
 #header {
-  position: relative;
+  position: fixed;
+  top: 0;
   height: 50px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .3)
 }
@@ -230,6 +231,7 @@ html, body, #fullpage {
   z-index: 2;
   position: relative;
   justify-content: space-between;
+  padding-top: 50px;
 }
 
 #main {
