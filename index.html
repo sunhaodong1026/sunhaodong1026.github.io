@@ -159,7 +159,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/27/HTML/">HTLP</a>
+      <a class="article-title" href="/2020/09/27/HTML/">HTML</a>
     </h1>
   
 
@@ -237,93 +237,9 @@
       
         <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="css-基础"><a href="#css-基础" class="headerlink" title="css 基础"></a>css 基础</h2><p>全称:cascading style sheets 汉译:层叠样式表表</p>
 <p>WEB 标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网信息的显示样式。<br>目前推荐遵循的是 W3C 发布的 CSS3.0</p>
-<p><strong>css 语法</strong><br>方法一</p>
-<ol>
-<li>内部样式表</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  /* css语句 */</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>方法二:<br>内联样式<br><code>&lt;标签 style=&quot;属性:属性值; 属性:属性值;&quot;&gt;&lt;/标签&gt;</code><br>例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div style=<span class="string">&quot;width:100px; height:100px; border:1px solid #eee; background:#fff;&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>方法三：<br>外部样式表<br>引用外部样式表文件</p>
-<ol>
-<li>使用 Link 标签引入</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span> <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span> href=<span class="string">&quot;目标文件的路径及文件名全称&quot;</span> /&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>说明：使用 link 元素导入外部样式表时，需将该元素写在文档头部，即与之间。<br>rel：用于定义文档关联，表示关联样式表；<br>type：定义文档类型； 2. 使用@import 引入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style <span class="built_in">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  @import url(目标文件的路径及文件名全称);</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>注：@和 import 之间没有空格,url 和小括号之间也没有空格,必须结尾以分号结束;</p>
-<p><strong><em>link 和 import 导入样式的区别</em></strong></p>
-<ol>
-<li>link 属于 XHTML 标签，而@import 完全是 CSS 提供的一种方式。 link 标签除了可以加载 CSS 外，还可以做很多其它的事情，比如定义 RSS，定义 rel 连接属性等，@import 就只能加载 CSS。</li>
-<li>加载顺序的差别:当一个页面被加载的时候（就是被浏览者浏览的时候），link 引用的 CSS 会同时被加载，而@import 引用的 CSS 会等到页面全部被下载完再被加载。所以有时候浏览@import 加载 CSS 的页面时开始会没有样式。</li>
-<li>兼容性的差别:@import 是 CSS2.1 提出的，所以老的浏览器不支持，@import 只 t 在 IE5 以上的才能识别，而 link 标签无此问题。</li>
-<li>使用 dom 控制样式时的差别:当使用 javascript 控制 dom 去改变样式的时候，只能使用 link 标签，因为@import 不是 dom 可以控制的.</li>
-</ol>
-<p><strong><em>样式表的优先级</em></strong></p>
-<hr>
-<p>内联样式最高<br>外部样式和内部样式谁写在下面就会覆盖上面的样式，优先级更高</p>
-<p><strong><em>样式表的作用域</em></strong></p>
-<hr>
-<p>内联样式只对当前标签起作用;<br>内部样式只对当前文件起作用;<br>外部样式对所有连接的页面都起作用;</p>
-<h3 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h3><p>CSS 选择符包括 4 大类:类型选择符、id 选择符、class 选择符、和特殊选择符;</p>
-<p>常用的选择符有十种左右:<br>类型选择符（标记选择器）<br>类选择符 （class 选择符）<br>ID 选择符 （id 选择器）<br>伪类选择器<br>群组选择符（集合选择器）<br>通配符（*）<br>子选择符<br>包含选择符（后代选择器）</p>
-<ol>
-<li>元素选择符/类型选择符</li>
-</ol>
-<p>元素名称 { 属性：属性值；} 如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">p &#123;</span><br><span class="line"></span><br><span class="line">background: red;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>说明：<br>① 元素选择符即使用结构中元素名称作为选择符。<br>如 body、div、p,img,em,strong,span……等。<br>② 所有的页面元素都可以作为选择符;<br>③ 使用元素选择器，会把文档中所有的标签都加相同的样式;<br>如：a｛background:red｝ 所有 a 的背景颜色都是红色</p>
-<ol>
-<li>id 选择器<br>#id 名{属性：属性值;}<br>说明：<br>① 使用 ID 选择器时需给元素定义 id 属性;<br>如：</li>
-</ol>
-<p><code>&lt;div id=&quot;top&quot;&gt;&lt;/div&gt;</code></p>
-<p>② 在 css 样式表中写 id 选择器时，id 名称前加#;<br>如：#box{width:300px; height:300px;}<br>③ 起 id 名时要取英文名，不能用关键字(所有的标记和属性都是关键字);<br>如：head 标记<br>④ 一个 id 名称只能对应文档中一个具体的元素;</p>
-<ol>
-<li>class 选择器/class 选择符<br>.class 名{属性:属性值;}</li>
-</ol>
-<p>说明：<br>① 使用类选择符时需为元素定义一个 class 属性；<br>如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div class=<span class="string">&quot;top&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>② 一个 class 属性可以起多个名字；<br>如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;p class=<span class="string">&quot;box main&quot;</span>&gt;&lt;/p&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>扩展：div.box{background:red;} 指定选择器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;box&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;p class=<span class="string">&quot;box&quot;</span>&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-
-<p>只会给 class 名为 box 的 div 标签加样式</p>
-<ol>
-<li>群组选择器<br>选择符 1，选择符 2，选择符 3{属性：属性值;}</li>
-</ol>
-<p>说明：当有多个选择符应用相同的样式时,可以使用群组选择器;</p>
-<ol start="2">
-<li><p>包含选择器(后代选择器)<br>选择符 1 选择符 2{属性：属性值;}<br>说明:选择符 1 和选择符 2 用空格隔开，选择符 1 中必须包含的所有选择符 2;</p>
-</li>
-<li><p>子元素选择器</p>
-</li>
-</ol>
-<p>选择符 1&gt;选择符 2{属性:属性值;}</p>
-<p>说明:子元素选择器只能匹配父元素下的第一级子元素</p>
-<ol start="4">
-<li>伪类选择器(伪类选择符)<br>a:link{属性：属性值;} 超链接的初始状态;<br>a:visited{属性：属性值;} 超链接被访问后的状态;<br>a:hover{属性：属性值;} 鼠标划过超链接时的状态;<br>a:active{属性：属性值;} 即鼠标按下时超链接的状态<br>说明：<br>① 当四个伪类选择器同时使用时，必须是以上的顺序;<br>② 写网页时一般我们简化使用<br>如：a{color:red;} a:hover{color:green;}<br>表示超链接的三种状态都相同,只有鼠标划过变颜色。</li>
-</ol>
-<p>通配符</p>
-<p>{属性:属性值;}<br>说明：通配选择符的写法是”*“，其含义就是所有元素。<br>用法：常用来重置样式</p>
-<p><strong><em>CSS 选择器的权重</em></strong></p>
-<hr>
-<p>选择符的权重<br>css 中用四位数字表示权重，权重的表达方式如：0,0,0,0<br>类型选择符的权重：0001<br>class 选择符的权重：0010<br>id 选择符的权重：0100<br>子选择符的权重：0000<br>属性选择符的权重：0010<br>伪类选择符的权重：0010<br>伪元素选择符的权重：0010<br>包含选择符的权重：包含的选择符权重值之和<br>内联样式的权重：1000<br>继承样式的权重：0000</p>
-<h3 id="注释的写法"><a href="#注释的写法" class="headerlink" title="注释的写法"></a>注释的写法</h3><p>HTML 注释</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 注释的内容 --&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>CSS 的注释</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/* 注释内容 */</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>注: 注释的快捷键 Ctrl + ? 键 或者 Alt + Shift + A</p>
-
+        
+          <a class="article-more-a" href="/2020/09/27/css%E5%9F%BA%E7%A1%80/#more">more >></a>
+        
       
 
       
@@ -384,54 +300,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/09/25/%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 style="color: red;">我的第一个文章</h1>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/29/%E6%96%87%E7%AB%A0/">展开全文 >></a>
         </p>
       
 
