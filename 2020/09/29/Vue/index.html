@@ -10,13 +10,15 @@
   
   
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="Vue 是什么？先放一下 Vue 的挂网，多读一读官方文档总是有好处的 ~   Vue 官网 是一套用于构建用户界面的前端渐进式的MVVM开发框架。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="关于Vue">
 <meta property="og:url" content="http://yoursite.com/2020/09/29/Vue/index.html">
 <meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="Vue 是什么？先放一下 Vue 的挂网，多读一读官方文档总是有好处的 ~   Vue 官网 是一套用于构建用户界面的前端渐进式的MVVM开发框架。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T06:46:24.000Z">
-<meta property="article:modified_time" content="2020-09-27T08:49:22.217Z">
+<meta property="article:modified_time" content="2020-09-29T07:50:54.334Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
@@ -97,7 +99,33 @@
       class="article-content article-content-cloud"
       itemprop="articleBody"
     >
-        
+       <h3 id="Vue-是什么？"><a href="#Vue-是什么？" class="headerlink" title="Vue 是什么？"></a>Vue 是什么？</h3><p>先放一下 Vue 的挂网，多读一读官方文档总是有好处的 ~ </p>
+
+<p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/" title="Vue官网">Vue 官网</a></p>
+<p>是一套用于构建用户界面的前端渐进式的MVVM开发框架。</p>
+
+<a id="more"></a>
+
+<h3 id="Vue-的生命周期是什么？"><a href="#Vue-的生命周期是什么？" class="headerlink" title="Vue 的生命周期是什么？"></a>Vue 的生命周期是什么？</h3><p>Vue实例从开始创建、初始化数据、编译模板、挂载dom和渲染、更新和渲染、卸载等一系列过程，这就是Vue的生命周期</p>
+
+<h3 id="Vue-的钩子函数有哪些？"><a href="#Vue-的钩子函数有哪些？" class="headerlink" title="Vue 的钩子函数有哪些？"></a>Vue 的钩子函数有哪些？</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>BeforeCreate()  组件实例被创建之初，组件的属性生效之前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>created()  组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>BeforeMount()  在挂载开始之前被调用：相关的 render 函数首次被调用<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>mounted()  el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>BeforeUpdate()  组件数据更新之前调用，发生在虚拟 DOM 打补丁之前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>updated()  组件数据更新之后<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>BeforeDestroy()  组件销毁前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>destroyed()  组件销毁成功<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Vue-在哪个生命周期内调用异步请求？为什么？"><a href="#Vue-在哪个生命周期内调用异步请求？为什么？" class="headerlink" title="Vue 在哪个生命周期内调用异步请求？为什么？"></a>Vue 在哪个生命周期内调用异步请求？为什么？</h3><p>可以在created、beforeMount、mounted中调用，因为这三个钩子函数中，data已经创建，可以将服务器返回的数据进行赋值。</p>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在created中用异步请求的优点</span><br><span class="line">    能更快的获取服务器的数据，减少页面加载时间。</span><br><span class="line">    ssr不支持beforeMount、mounted，所以放在created中有助于一致性。</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Vue-组件间通信方式有哪些？"><a href="#Vue-组件间通信方式有哪些？" class="headerlink" title="Vue 组件间通信方式有哪些？"></a>Vue 组件间通信方式有哪些？</h3><ol>
+<li>父传子 使用 props 属性进行</li>
+<li>字传父 使用事件派发 ($emit)</li>
+<li>非相关组件 使用时间总线(EventBus)</li>
+</ol>
+<h3 id="路由的传参方式有哪些？"><a href="#路由的传参方式有哪些？" class="headerlink" title="路由的传参方式有哪些？"></a>路由的传参方式有哪些？</h3><ol>
+<li>使用<router-link>进行路由导航，传递参数。</li>
+<li>使用 this.$router.push,通过配置路由属性中的 path 来确定匹配的路由，携带参数进行传参。</li>
+<li>使用 this.$router.push,通过配置路由属性中的 name 来确定匹配的路由，携带参数进行传参。</li>
+<li>使用 path 匹配路由通过 query 传参，query 传参的参数会显示在 url 地址的后面 ?id=……</li>
+</ol>
+ 
     </div>
     
     <footer class="article-footer">完</footer>
@@ -165,7 +193,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML%E3%80%81CSS/" rel="tag">HTML、CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
     </div>
   </div>
 
@@ -173,7 +201,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/HTML%E3%80%81CSS/" style="font-size: 20px;">HTML、CSS</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/HTML/" style="font-size: 20px;">HTML</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
     </div>
   </div>
   

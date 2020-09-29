@@ -18,9 +18,10 @@
 <meta property="og:description" content="css 基础全称:cascading style sheets 汉译:层叠样式表表 WEB 标准中的表现标准语言,表现标准语言在网页中主要对网页信息的显示进行控制，简单说就是如何修饰网信息的显示样式。目前推荐遵循的是 W3C 发布的 CSS3.0">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-27T03:11:24.000Z">
-<meta property="article:modified_time" content="2020-09-29T02:20:28.433Z">
+<meta property="article:modified_time" content="2020-09-29T07:45:17.451Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="HTML、CSS">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
@@ -84,7 +85,7 @@
   <time datetime="2020-09-27T03:11:24.000Z" itemprop="datePublished">2020-09-27</time>
 </a>
      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML%E3%80%81CSS/" rel="tag">HTML、CSS</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
 
   </div>
   
@@ -110,16 +111,16 @@
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* css语句 */</span></span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>方法二:<br>内联样式<br><code>&lt;标签 style=&quot;属性:属性值; 属性:属性值;&quot;&gt;&lt;/标签&gt;</code><br>例如：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div style=&quot;width:100px; height:100px; border:1px solid #eee; background:#fff;&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:100px; height:100px; border:1px solid #eee; background:#fff;&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>方法三：<br>外部样式表<br>引用外部样式表文件</p>
 <ol>
 <li>使用 Link 标签引入</li>
 </ol>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;目标文件的路径及文件名全称&quot; /&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;目标文件的路径及文件名全称&quot;</span> /&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>说明：使用 link 元素导入外部样式表时，需将该元素写在文档头部，即与之间。<br>rel：用于定义文档关联，表示关联样式表；<br>type：定义文档类型； 2. 使用@import 引入</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">@import</span> url(目标文件的路径及文件名全称);</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="css">  <span class="keyword">@import</span> url(目标文件的路径及文件名全称);</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>注：@和 import 之间没有空格,url 和小括号之间也没有空格,必须结尾以分号结束;</p>
 <p><strong><em>link 和 import 导入样式的区别</em></strong></p>
@@ -257,7 +258,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML%E3%80%81CSS/" rel="tag">HTML、CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
     </div>
   </div>
 
@@ -265,7 +266,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/HTML%E3%80%81CSS/" style="font-size: 20px;">HTML、CSS</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
+      <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/HTML/" style="font-size: 20px;">HTML</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a>
     </div>
   </div>
   
