@@ -18,7 +18,7 @@
 <meta property="og:description" content="我为什么要搭建一篇博客？ 之前在学习的过程中，遇到过的很多问题，基本上都是通过百度解决的，然后也见了很多人搭建了自己博客，并且每个人的博客对于他们来说的作用都不一样，我决定搭建一个博客也是觉得我的学习历程可以被记录下来，就当做我在前端进阶之路上的一个日记本吧。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-30T07:00:02.000Z">
-<meta property="article:modified_time" content="2020-09-28T13:21:07.627Z">
+<meta property="article:modified_time" content="2020-09-29T02:20:32.712Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
@@ -62,38 +62,44 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-blog" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article
+  id="post-blog"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
   
-    <header class="article-header">
-      
+  <header class="article-header">
+    
   
     <h1 class="article-title" itemprop="name">
       hexo+antiquity的坎坷历程
     </h1>
   
 
-    </header>
+  </header>
   
   <div class="article-meta">
     <a href="/2020/08/30/blog/" class="article-date">
   <time datetime="2020-08-30T07:00:02.000Z" itemprop="datePublished">2020-08-30</time>
 </a>
-    
-    
+     
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
 
   </div>
   
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
   
 
   <div class="article-inner">
     
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="我为什么要搭建一篇博客？"><a href="#我为什么要搭建一篇博客？" class="headerlink" title="我为什么要搭建一篇博客？"></a>我为什么要搭建一篇博客？</h3><ul>
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h3 id="我为什么要搭建一篇博客？"><a href="#我为什么要搭建一篇博客？" class="headerlink" title="我为什么要搭建一篇博客？"></a>我为什么要搭建一篇博客？</h3><ul>
 <li><p>之前在学习的过程中，遇到过的很多问题，基本上都是通过百度解决的，然后也见了很多人搭建了自己博客，并且每个人的博客对于他们来说的作用都不一样，我决定搭建一个博客也是觉得我的学习历程可以被记录下来，就当做我在前端进阶之路上的一个日记本吧。</p>
 
 </li>
@@ -117,14 +123,14 @@
 <br/>
 
 <h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><p>在你的博客文件目录下打开 git Bash，执行下列命令：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/yiluyanxia/hexo-theme-antiquity.git themes/yilia</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;yiluyanxia&#x2F;hexo-theme-antiquity.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure></div>
 <p>然后打开你的博客目录，会发现 themes 文件下多出了一个antiquity 文件夹。</p>
 
 <h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>打开博客文件根目录下的_config.yml 文件，进行修改</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme：antiquity  <span class="comment">#初始值应该是landscape</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme：antiquity  #初始值应该是landscape</span><br></pre></td></tr></table></figure></div>
 <p>然后执行下列代码更新配置</p>
 
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> them/antiquity</span><br><span class="line"></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd them&#x2F;antiquity</span><br><span class="line"></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></div>
 
 <p>然后执行 hexo s 就可以在本地看到更新后的主题了。</p>
 
@@ -134,17 +140,13 @@
 
 <p><strong><em>注：</em></strong></p>
 <p>如果有其他不懂得地方建议多参考官方教程和相关教程，多搜索，读文档，慢慢修改，先本地服务器查看一下，确认无误后再上传到 giuhub</p>
-
-      
+ 
     </div>
     
-      <footer class="article-footer">
-        完
-      </footer>
+    <footer class="article-footer">完</footer>
     
   </div>
-  
-    
+   
 <nav id="article-nav">
   <div class="article-nav-block">
     
@@ -167,8 +169,7 @@
     
   </div>
 </nav>
-
-    <link rel="stylesheet" href="/css/gitment.css"> 
+ <link rel="stylesheet" href="/css/gitment.css"> 
 <script src="/js/gitment.js"></script>
 
 <div id="gitmentContainer"></div>
@@ -184,9 +185,7 @@ var gitment = new Gitment({
 })
 gitment.render('gitmentContainer')
 </script>
-
-  
-  
+ 
 </article>
 </section>
         <aside id="sidebar">
