@@ -139,16 +139,11 @@
       class="article-content article-content-cloud"
       itemprop="articleBody"
     >
-       <h2 id="电商网站常用功能-购物车"><a href="#电商网站常用功能-购物车" class="headerlink" title="电商网站常用功能(购物车)"></a>电商网站常用功能(购物车)</h2><p><strong>单选全选</strong></p>
-<p>vue 代码</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单选  全选</span></span><br><span class="line">checkAll: &#123;</span><br><span class="line">  get() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="built_in">this</span>.list.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> item.checked).length === <span class="built_in">this</span>.list.length</span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line">  set(v) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.list.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      item.checked = v;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>计算 单价 总价</strong></p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计算总价</span></span><br><span class="line">allPrice() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="built_in">this</span>.list</span><br><span class="line">      .filter(<span class="function">(<span class="params">item</span>) =&gt;</span> item.checked)</span><br><span class="line">      <span class="comment">// 聚合运算操作</span></span><br><span class="line">      .reduce(<span class="function">(<span class="params">pre, cur</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> pre + cur.product.price * cur.quantity;</span><br><span class="line">      &#125;, <span class="number">0</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>因为本人比较懒，所以干脆把整个购物车代码截图放到下边！hhhhhhhhhhhhhhh</strong></p>
-<p><img src="https://github.com/sunhaodong1026/sunhaodong1026.github.io/blob/master/pic/cart.png" alt="购物车全部代码"></p>
- 
+       <h2 id="电商网站常用功能-购物车"><a href="#电商网站常用功能-购物车" class="headerlink" title="电商网站常用功能(购物车)"></a>电商网站常用功能(购物车)</h2> 
+      <p class="article-more-link">
+        <a href="/2020/10/03/Vue%E7%9A%84%E7%AE%80%E5%8D%95%E9%A1%B9%E7%9B%AE%E5%8A%9F%E8%83%BD/#more">阅读全文</a>
+      </p>
+       
     </div>
     
   </div>
