@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>vue开发中需要注意的一些内容 | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="主要用于记录在 Vue 项目开发中踩过的坑，或者没有了解过的东西(持续更新)前端学无止境 ヾ(ﾟ ∀ ﾟゞ)秃头从未停止 ヾ(ﾟ ∀ ﾟゞ)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue开发中需要注意的一些内容">
+<meta property="og:url" content="http://yoursite.com/2020/09/28/vue%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="主要用于记录在 Vue 项目开发中踩过的坑，或者没有了解过的东西(持续更新)前端学无止境 ヾ(ﾟ ∀ ﾟゞ)秃头从未停止 ヾ(ﾟ ∀ ﾟゞ)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-28T09:03:33.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:10:33.036Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="项目开发">
+<meta property="article:tag" content="注意点">
+<meta property="article:tag" content="随笔">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-vue开发中需要注意的一些内容"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      vue开发中需要注意的一些内容
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/09/28/vue%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/" class="article-date">
+  <time datetime="2020-09-28T09:03:33.000Z" itemprop="datePublished">2020-09-28</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="主要用于记录在-Vue-项目开发中踩过的坑，或者没有了解过的东西-持续更新"><a href="#主要用于记录在-Vue-项目开发中踩过的坑，或者没有了解过的东西-持续更新" class="headerlink" title="主要用于记录在 Vue 项目开发中踩过的坑，或者没有了解过的东西(持续更新)"></a>主要用于记录在 Vue 项目开发中踩过的坑，或者没有了解过的东西(持续更新)</h4><p>前端学无止境 ヾ(ﾟ ∀ ﾟゞ)<br>秃头从未停止 ヾ(ﾟ ∀ ﾟゞ)</p>
+<a id="more"></a>
+
+<h4 id="v-if-和-v-show-要学会区分开使用"><a href="#v-if-和-v-show-要学会区分开使用" class="headerlink" title="v-if 和 v-show 要学会区分开使用"></a>v-if 和 v-show 要学会区分开使用</h4><p><strong>区别</strong></p>
+<ul>
+<li>手段：<code>v-if</code> 是通过控制 <code>dom</code> 节点的存在与否来控制元素的显隐;<code>v-show</code> 是通过设置 <code>DOM</code> 元素的 <code>display</code> 样式，<code>block</code> 为显示，<code>none</code> 为隐藏;</li>
+<li>编译过程：<code>v-if</code> 切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件;<code>v-show</code> 只是简单的基于 <code>css</code> 切换;</li>
+<li>编译条件：<code>v-if</code> 是惰性的，如果初始条件为假，则什么也不做;只有在条件第一次变为真时才开始局部编译（编译被缓存?编译被缓存后，然后再切换的时候进行局部卸载); <code>v-show</code> 是在任何条件下（首次条件是否为真）都被编译，然后被缓存，而且 <code>DOM</code> 元素保留;</li>
+<li>性能消耗：<code>v-if</code> 有更高的切换消耗;<code>v-show</code> 有更高的初始渲染消耗;</li>
+</ul>
+<p><strong>使用场景</strong></p>
+<p>基于以上区别，因此，如果需要非常频繁地切换，则使用 <code>v-show</code> 较好;如果在运行时条件很少改变，则使用 <code>v-if</code> 较好。</p>
+<p><strong>总结</strong></p>
+<p><code>v-if</code> 判断是否加载，可以减轻服务器的压力，在需要时加载,但有更高的切换开销;<code>v-show</code> 调整 <code>DOM</code> 元素的 <code>CSS</code> 的 <code>dispaly</code> 属性，可以使客户端操作更加流畅，但有更高的初始渲染开销。如果需要非常频繁地切换，则使用 <code>v-show</code> 较好；如果在运行时条件很少改变，则使用 <code>v-if</code> 较好。</p>
+<h4 id="页面内监听-scroll-事件的方法"><a href="#页面内监听-scroll-事件的方法" class="headerlink" title="页面内监听 scroll 事件的方法"></a>页面内监听 scroll 事件的方法</h4><p>如果是整个网页可以滑动，可以使用以下事件监听</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">&quot;scroll&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;scrolling&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>但是大部分的场景是在一个元素内发生页面滚动</p>
+<p>举例：在页面内的一个<code>div</code>需要监听的</p>
+<ul>
+<li>滑动的组件外层的<code>div</code>加 <code>ref=&quot;viewBox&quot;</code> 为了通过<code>$refs</code>获取<code>dom</code>元素</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--设备列表--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;deviceWrapper&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;viewBox&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">mu-refresh-control</span> <span class="attr">:refreshing</span>=<span class="string">&quot;refreshing&quot;</span> <span class="attr">:trigger</span>=<span class="string">&quot;trigger&quot;</span> @<span class="attr">refresh</span>=<span class="string">&quot;refresh&quot;</span>/&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo-grid&quot;</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!--设备列表 手机一行两列 pad一行4列--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">mu-row</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mu-col</span> <span class="attr">v-for</span>=<span class="string">&quot;device in devicesList&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">tablet</span>=<span class="string">&quot;25&quot;</span> <span class="attr">desktop</span>=<span class="string">&quot;25&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">deviceCardView</span> <span class="attr">:device-data</span>=<span class="string">&quot;device&quot;</span>&quot;&gt;</span><span class="tag">&lt;/<span class="name">devicelightCardView</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mu-col</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">mu-row</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;bottomLine&quot;</span> <span class="attr">v-bind:class</span>=<span class="string">&quot;&#123;bottomLineVisible:isScroll&#125;&quot;</span>&gt;</span>---------------------我是有底线的---------------------<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>获取元素，监听事件</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line"><span class="comment">// 通过$refs获取dom元素</span></span><br><span class="line"> <span class="built_in">this</span>.box = <span class="built_in">this</span>.$refs.viewBox</span><br><span class="line"> <span class="comment">// 监听这个dom的scroll事件</span></span><br><span class="line"> <span class="built_in">this</span>.box.addEventListener(<span class="string">&#x27;scroll&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">&quot; scroll &quot;</span> + <span class="built_in">this</span>.$refs.viewBox.scrollTop)</span><br><span class="line"> <span class="comment">//以下是我自己的需求，向下滚动的时候显示“我是有底线的（类似支付宝）”</span></span><br><span class="line"> <span class="built_in">this</span>.isScroll=<span class="built_in">this</span>.$refs.viewBox.scrollTop&gt;<span class="number">0</span></span><br><span class="line"> &#125;, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>这样能正常打印出来<code>.scrollTop</code></p>
+<h4 id="封装一个组件，用于段落文字点击展开和收起功能"><a href="#封装一个组件，用于段落文字点击展开和收起功能" class="headerlink" title="封装一个组件，用于段落文字点击展开和收起功能"></a>封装一个组件，用于段落文字点击展开和收起功能</h4><p><strong>组件调用方法</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Unfold</span></span></span><br><span class="line"><span class="tag">  <span class="attr">data</span>=<span class="string">&quot;这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。这里是文章测试标题，含标点一共二十个字。&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">maxLength</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>属性说明</strong></p>
+<p><code>data</code>：文字数据<br><code>maxLen</code>：最大长度，超过这个数，被截取，默认 80，不改长度无需传值</p>
+<p><strong>封装好组件的完整代码</strong></p>
+<p>需要此功能的地方直接调用这个组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;span&gt;</span><br><span class="line">    &lt;span v-if&#x3D;&quot;data.length &lt; maxLen&quot;&gt;</span><br><span class="line">      &lt;span class&#x3D;&quot;tj&quot;&gt;&#123;&#123; data &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;span&gt;</span><br><span class="line">    &lt;span v-else&gt;</span><br><span class="line">      &lt;span class&#x3D;&quot;tj&quot;</span><br><span class="line">        &gt;&#123;&#123; showBtn ? sliceStr : data &#125;&#125;</span><br><span class="line">        &lt;span class&#x3D;&quot;btnWord&quot; @click&#x3D;&quot;showBtn &#x3D; !showBtn&quot;&gt;&#123;&#123;</span><br><span class="line">          showBtn ? &quot;全文&quot; : &quot;收起&quot;</span><br><span class="line">        &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;unfold&quot;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      showBtn: true,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    &#x2F;&#x2F; 数据</span><br><span class="line">    data: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      default: &quot;&quot;,</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; 最大长度</span><br><span class="line">    maxLen: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 80,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    sliceStr() &#123;</span><br><span class="line">      if (this.data !&#x3D; null) &#123;</span><br><span class="line">        return this.data.substring(0, this.maxLen) + &quot;...&quot;;</span><br><span class="line">      &#125;</span><br><span class="line">      return &quot;&quot;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang&#x3D;&quot;less&quot; scoped&gt;</span><br><span class="line">.tj &#123;</span><br><span class="line">  text-align: justify;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btnWord &#123;</span><br><span class="line">  color: cornflowerblue;</span><br><span class="line">  cursor: pointer;</span><br><span class="line">  word-break: keep-all;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>本文作者: 一只野生程序孙<br>本文链接: <a target="_blank" rel="noopener" href="http://dxh98.cn/vue%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">vue 开发中需要注意的一些内容</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/29/Vue/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            关于Vue
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/28/HTTP/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">关于HTTP</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

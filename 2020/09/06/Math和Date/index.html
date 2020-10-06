@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Math和Date | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="MathMath 是 JavaScript 的原生对象，提供各种数学功能。该对象不是构造函数，不能生成实例，所有的属性和方法都必须在 Math 对象上调用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Math和Date">
+<meta property="og:url" content="http://yoursite.com/2020/09/06/Math%E5%92%8CDate/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="MathMath 是 JavaScript 的原生对象，提供各种数学功能。该对象不是构造函数，不能生成实例，所有的属性和方法都必须在 Math 对象上调用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-06T11:12:52.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:03:47.551Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="Date">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-Math和Date"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      Math和Date
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/09/06/Math%E5%92%8CDate/" class="article-date">
+  <time datetime="2020-09-06T11:12:52.000Z" itemprop="datePublished">2020-09-06</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h4><p>Math 是 JavaScript 的原生对象，提供各种数学功能。该对象不是构造函数，不能生成实例，所有的属性和方法都必须在 Math 对象上调用。</p>
+<a id="more"></a>
+
+<p>Math 对象的属性，提供以下一些数学常数。（了解）<br>Math.E：常数 e。<br>Math.PI：常数 Pi。</p>
+<ol>
+<li><strong>Math.abs</strong>方法返回参数值的绝对值。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.abs(<span class="number">1</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.abs(<span class="number">-1</span>); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>Math.max 方法返回参数之中最大的那个值，Math.min 返回最小的那个值。如果参数为空, Math.min 返回 Infinity, Math.max 返回-Infinity。</p>
+<p>Infinity 用于存放表示正无穷大的数值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.max(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>); <span class="comment">// 5</span></span><br><span class="line"><span class="built_in">Math</span>.min(<span class="number">2</span>, <span class="number">-1</span>, <span class="number">5</span>); <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">Math</span>.min(); <span class="comment">// Infinity</span></span><br><span class="line"><span class="built_in">Math</span>.max(); <span class="comment">// -Infinity</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li><strong>Math.floor</strong>方法小于参数值的最大整数（地板值）。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.floor(<span class="number">3.2</span>); <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="number">-3.2</span>); <span class="comment">// -4</span></span><br><span class="line"><span class="comment">//Math.ceil方法返回大于参数值的最小整数（天花板值）。</span></span><br><span class="line"><span class="built_in">Math</span>.ceil(<span class="number">3.2</span>); <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">Math</span>.ceil(<span class="number">-3.2</span>); <span class="comment">// -3</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li><strong>Math.round</strong>方法用于四舍五入。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.round(<span class="number">0.1</span>); <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="number">0.5</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="number">0.6</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="number">-1.1</span>); <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="number">-1.5</span>); <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="number">-1.6</span>); <span class="comment">// -2</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="4">
+<li><strong>Math.pow</strong>方法返回以第一个参数为底数、第二个参数为幂的指数值。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 等同于 2 ** 2</span></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">2</span>); <span class="comment">// 4</span></span><br><span class="line"><span class="comment">// 等同于 2 ** 3</span></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">// 8</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="5">
+<li><strong>Math.sqrt</strong>方法返回参数值的平方根。如果参数是一个负值，则返回 NaN。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">4</span>); <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-4</span>); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure></div>
+
+<p>勾股定理<br>a^2+b^2=c^2</p>
+<p>三角函数<br>Math 对象还提供一系列三角函数方<br><code>Math.sin()</code>：返回参数的正弦（参数为弧度值）<br><code>Math.cos()</code>：返回参数的余弦（参数为弧度值）<br><code>Math.tan()</code>：返回参数的正切（参数为弧度值）<br><code>30*Math.PI/180</code> 角度转为弧度</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>); <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.tan(<span class="number">0</span>); <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="built_in">Math</span>.PI / <span class="number">2</span>); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="6">
+<li>**Math.random()**返回 0 到 1 之间的一个伪随机数，可能等于 0，但是一定小于 1。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.random(); <span class="comment">// 0.7151307314634323</span></span><br></pre></td></tr></table></figure></div>
+
+<p>任意范围的随机整数生成函数如下。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandomInt</span>(<span class="params">min, max</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>)) + min;</span><br><span class="line">&#125;</span><br><span class="line">getRandomInt(<span class="number">1</span>, <span class="number">6</span>); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h4><p>Date 对象是 JavaScript 原生的时间库。它以 1970 年 1 月 1 日 00:00:00 作为时间的零点，可以表示的时间范围是前后各 1 亿天（单位为毫秒）<br>日期对象创建<br>Date 可以当作构造函数使用。对它使用 new 命令，会返回一个 Date 对象的实例。如果不加参数，实例代表的就是当前时间。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">today;</span><br><span class="line"><span class="comment">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">today.toString();</span><br><span class="line"><span class="comment">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>对 Date 实例求值，返回的是一个字符串，代表该实例对应的时间。</p>
+<h6 id="日期处理"><a href="#日期处理" class="headerlink" title="日期处理"></a>日期处理</h6><p><code>oDate.getDate()</code> 返回一个月中的某一天 (1 ~ 31)<br><code>oDate.getDay()</code> 返回一周中的某一天 (0 ~ 6)<br><code>oDate.getMonth()</code> 返回月份 (0 ~ 11)<br><code>oDate.getFullYear()</code> 以四位数字返回年份</p>
+<p>作为构造函数时，Date 对象可以接受多种格式的参数，返回一个该参数对应的时间实例。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数为时间零点开始计算的毫秒数</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1378218728000</span>)（最常用）</span><br><span class="line"><span class="comment">// Tue Sep 03 2013 22:32:08 GMT+0800 (CST)</span></span><br><span class="line">/ 参数为多个整数，</span><br><span class="line"><span class="comment">// 代表年、月、日、小时、分钟、秒、毫秒</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2013</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"><span class="comment">// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)</span></span><br></pre></td></tr></table></figure></div>
+
+<p>参数也可以是一个字符串（最常用）<br>日期字符串应该符合 RFC 2822 和 ISO 8061 这两个标准，即 YYYY-MM-DDTHH:mm:ss.sssZ 格式</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2013-2-15&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2013/2/15&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;02/15/2013&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2013-FEB-15&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;FEB, 15, 2013&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;Feberuary, 15, 2013&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;15 Feb 2013&quot;</span>);</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;15, Feberuary, 2013&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>上面多种日期字符串的写法，返回的都是同一个时间</p>
+<p>日期处理<br><code>oDate.getDate()</code> 返回一个月中的某一天 (1 ~ 31)<br><code>oDate.getDay()</code> 返回一周中的某一天 (0 ~ 6)<br><code>oDate.getMonth()</code> 返回月份 (0 ~ 11)<br><code>oDate.getFullYear()</code> 以四位数字返回年份<br><code>oDate.getHours()</code> 返回当前小时（0-23）<br><code>oDate.getMinutes()</code> 返回当前分钟 (0 ~ 59)<br><code>oDate.getSeconds()</code> 返回当前秒(0 ~ 59)<br><code>oDate.getMillisenconds()</code> 返回当前毫秒(0 ~ 999)<br>注意，月份从 0 开始计算，但是，天数从 1 开始计算。另外，除了日期的默认值为 1，小时、分钟、秒钟和毫秒的默认值都是 0。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2013</span>, <span class="number">15</span>);</span><br><span class="line"><span class="comment">// Tue Apr 01 2014 00:00:00 GMT+0800 (CST)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>oDate.getTime()</code> 返回 1970 年 1 月 1 日至今的毫秒数<br><code>oDate.setDate()</code> 设置月中的某一天 (1 ~ 31)<br><code>oDate.setMonth()</code> 设置月份 (0 ~ 11)<br>例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">oDate.setMonth(<span class="number">9</span>);</span><br><span class="line">alert(oDate.getMonth());</span><br></pre></td></tr></table></figure></div>
+
+<p><code>oDate.setFullYear()</code> 设置年份（四位数）<br><code>oDate.setHours()</code> 设置小时（0-23）<br><code>oDate.setMinutes()</code> 设置分钟 (0 ~ 59)<br><code>oDate.setSeconds()</code> 设置秒(0 ~ 59)<br><code>oDate.setMillisenconds()</code> 设置毫秒(0 ~ 999)<br><code>oDate.setTime()</code> 设置 1970 年 1 月 1 日至今的毫秒数<br>这些参数如果超出了正常范围，会被自动折算。比如，如果月设为 15，就折算为下一年的 4 月</p>
+<h6 id="日期的运算"><a href="#日期的运算" class="headerlink" title="日期的运算"></a>日期的运算</h6><p>类型自动转换时，Date 实例如果转为数值，则等于对应的毫秒数；如果转为字符串，则等于对应的日期字符串。所以，两个日期实例对象进行减法运算时，返回的是它们间隔的毫秒数；进行加法运算时，返回的是两个字符串连接而成的新字符串。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> d1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2000</span>, <span class="number">2</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> d2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2000</span>, <span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line">d2 - d1;</span><br><span class="line"><span class="comment">// 2678400000</span></span><br><span class="line">d2 + d1;</span><br><span class="line"><span class="comment">// &quot;Sat Apr 01 2000 00:00:00 GMT+0800 (CST)Wed Mar 01 2000 00:00:00</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h6><p><code>Date.parse</code>方法用来解析日期字符串，返回该时间距离时间零点（1970 年 1 月 1 日 00:00:00）的毫秒数。<br>日期字符串应该符合 RFC 2822 和 ISO 8061 这两个标准，即 YYYY-MM-DDTHH:mm:ss.sssZ 格式，其中最后的 Z 表示时区。但是，其他格式也可以被解析，请看下面的例子。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Date</span>.parse(<span class="string">&quot;Aug 9, 1995&quot;</span>);</span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">&quot;January 26, 2011 13:51:50&quot;</span>);</span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">&quot;Mon, 25 Dec 1995 13:30:00 GMT&quot;</span>);</span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">&quot;Mon, 25 Dec 1995 13:30:00 +0430&quot;</span>);</span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">&quot;2011-10-10&quot;</span>);</span><br><span class="line"><span class="built_in">Date</span>.parse(<span class="string">&quot;2011-10-10T14:48:00&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h4><p><code>setInterval(func,time)</code><br>有两个参数，第一个参数是一个函数，第二个参数是时间间隔，单位是毫秒<br>每间隔 time 毫秒，会执行一次函数<br>setInterval 的返回值是一个数字</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">box</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> timer = setInerval(box, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码意思是，没间隔 1000 毫秒，box 函数执行一次。<br>取消定时器的执行<br>如果想要取消定时器的执行我们需要拿到 setInerval 定时器函数的返回值，调用 clearInterval，清除定时器<br><code>clearInterval(timer)</code>，调用之后 box 函数就不会再执行了！</p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/Math%E5%92%8CDate/">Math 和 Date</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            面向对象
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/05/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">循环语句</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>数组 | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="数组的概念所谓数组，是有序的元素序列。（一组有序 数据）JavaScript 的 Array 可以包含任意数据类型。注：一般来说数组中元素的类型相同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组">
+<meta property="og:url" content="http://yoursite.com/2020/08/29/%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="数组的概念所谓数组，是有序的元素序列。（一组有序 数据）JavaScript 的 Array 可以包含任意数据类型。注：一般来说数组中元素的类型相同">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-29T06:53:47.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:18:58.158Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="数组">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-数组"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      数组
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/08/29/%E6%95%B0%E7%BB%84/" class="article-date">
+  <time datetime="2020-08-29T06:53:47.000Z" itemprop="datePublished">2020-08-29</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="数组的概念"><a href="#数组的概念" class="headerlink" title="数组的概念"></a>数组的概念</h4><p>所谓数组，是有序的元素序列。（一组有序 数据）<br>JavaScript 的 Array 可以包含任意数据类型。注：一般来说数组中元素的类型相同</p>
+<a id="more"></a>
+
+<h4 id="数组的创建方式"><a href="#数组的创建方式" class="headerlink" title="数组的创建方式"></a>数组的创建方式</h4><ol>
+<li>字面量</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>]; <span class="comment">//数组中有两个元素</span></span><br><span class="line">arr.length; <span class="comment">//获取数组的长度</span></span><br><span class="line">arr[i]; <span class="comment">//获取数组中的第i个元素，i称为数组的下标或者索引，下标从0开始</span></span><br><span class="line">arr[<span class="number">0</span>]; <span class="comment">//获取数组中的第一个元素</span></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">100</span>; <span class="comment">//修改数组中第一个元素的值为100</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>构造函数方式创建数组<br>Array 是一个构造函数，可以用它生成新的数组</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">2</span>);</span><br><span class="line">arr.length; <span class="comment">// 2</span></span><br><span class="line">arr[<span class="number">0</span>]; <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，Array 构造函数的参数 2，表示生成一个两个成员的数组。</p>
+<p>Array 构造函数有一个很大的缺陷，就是不同的参数，会导致它的行为不一致。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单个非数值（比如字符串、布尔值、对象等）作为参数，</span></span><br><span class="line"><span class="comment">// 则该参数是返回的新数组的成员</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;abc&quot;</span>); <span class="comment">// [&#x27;abc&#x27;]</span></span><br><span class="line"><span class="comment">// 多参数时，所有参数都是返回的新数组的成员</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>); <span class="comment">// [1, 2]</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>); <span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>可以看到，Array 作为构造函数，行为很不一致。因此，不建议使用它生成新数组，直接使用数组字面量是更好的做法。</p>
+<h4 id="数组的操作"><a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h4><h6 id="push-pop-unshift-shift"><a href="#push-pop-unshift-shift" class="headerlink" title="push/pop/unshift/shift"></a>push/pop/unshift/shift</h6><ol>
+<li><strong>push</strong>方法用于在数组的末端添加一个或多个元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line">arr.push(<span class="number">1</span>); <span class="comment">// 1</span></span><br><span class="line">arr.push(<span class="string">&quot;a&quot;</span>); <span class="comment">// 2</span></span><br><span class="line">arr.push(<span class="literal">true</span>, &#123;&#125;); <span class="comment">// 4</span></span><br><span class="line">arr; <span class="comment">// [1, &#x27;a&#x27;, true, &#123;&#125;]</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li><strong>pop</strong>方法用于删除数组的最后一个元素，并返回该元素。注意，该方法会改变原数组。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">arr.pop(); <span class="comment">// &#x27;c&#x27;</span></span><br><span class="line">arr; <span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>对空数组使用 pop 方法，不会报错，而是返回 undefined。</p>
+<p>push 和 pop 结合使用，就构成了“后进先出”的栈结构（stack）。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line">arr.push(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">arr.push(<span class="number">3</span>); <span class="comment">//1,2,3</span></span><br><span class="line">arr.pop();</span><br><span class="line">arr; <span class="comment">// [1, 2]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，3 是最后进入数组的，但是最早离开数组。<br>concat 合并数组</p>
+<ol start="3">
+<li><strong>shift</strong>方法用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.shift(); <span class="comment">// &#x27;a&#x27;</span></span><br><span class="line">a; <span class="comment">// [&#x27;b&#x27;, &#x27;c&#x27;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>push 和 shift 结合使用，就构成了“先进先出”的队列结构（queue）。</p>
+<ol start="4">
+<li><strong>unshift</strong>方法用于在数组的第一个位置添加元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.unshift(<span class="string">&quot;x&quot;</span>); <span class="comment">// 4</span></span><br><span class="line">a; <span class="comment">// [&#x27;x&#x27;, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="slice-splice"><a href="#slice-splice" class="headerlink" title="slice/splice"></a>slice/splice</h6><ol>
+<li><strong>slice</strong>方法用于复制目标数组的一部分，返回一个新数组，原数组不变。<br><code>arr.slice(start, end);</code><br>它的第一个参数为起始位置（从 0 开始），第二个参数为终止位置（但该位置的元素本身不包括在内）。如果省略第二个参数，则一直返回到原数组的最后一个成员。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.slice(<span class="number">0</span>); <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span></span><br><span class="line">a.slice(<span class="number">1</span>); <span class="comment">// [&quot;b&quot;, &quot;c&quot;]</span></span><br><span class="line">a.slice(<span class="number">1</span>, <span class="number">2</span>); <span class="comment">// [&quot;b&quot;]</span></span><br><span class="line">a.slice(<span class="number">2</span>, <span class="number">6</span>); <span class="comment">// [&quot;c&quot;]</span></span><br><span class="line">a.slice(); <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，最后一个例子 slice 没有参数，实际上等于返回一个原数组的拷贝。</p>
+<p>如果 slice 方法的参数是负数，则表示倒数计算的位置。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.slice(<span class="number">-2</span>); <span class="comment">// [&quot;b&quot;, &quot;c&quot;]</span></span><br><span class="line">a.slice(<span class="number">-2</span>, <span class="number">-1</span>); <span class="comment">// [&quot;b&quot;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，-2 表示倒数计算的第二个位置，-1 表示倒数计算的第一个位置。</p>
+<p>如果第一个参数大于等于数组长度，或者第二个参数小于第一个参数，则返回空数组。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.slice(<span class="number">4</span>); <span class="comment">// []</span></span><br><span class="line">a.slice(<span class="number">2</span>, <span class="number">1</span>); <span class="comment">// []</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li><strong>splice</strong>方法用于删除原数组的一部分成员，并可以在删除的位置添加新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。<br><code>arr.splice(start, count, addElement1, addElement2, ...);</code><br>splice 的第一个参数是删除的起始位置（从 0 开始），第二个参数是被删除的元素个数。如果后面还有更多的参数，则表示这些就是要被插入数组的新元素。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;f&quot;</span>];</span><br><span class="line">a.splice(<span class="number">4</span>, <span class="number">2</span>); <span class="comment">// [&quot;e&quot;, &quot;f&quot;]</span></span><br><span class="line">a; <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码从原数组 4 号位置，删除了两个数组成员。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;f&quot;</span>];</span><br><span class="line">a.splice(<span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>); <span class="comment">// [&quot;e&quot;, &quot;f&quot;]</span></span><br><span class="line">a; <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, 1, 2]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码除了删除成员，还插入了两个新成员。<br>起始位置如果是负数，就表示从倒数位置开始删除。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;f&quot;</span>];</span><br><span class="line">a.splice(<span class="number">-4</span>, <span class="number">2</span>); <span class="comment">// [&quot;c&quot;, &quot;d&quot;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码表示，从倒数第四个位置 c 开始删除两个成员。</p>
+<p>如果只是单纯地插入元素，splice 方法的第二个参数可以设为 0。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>];</span><br><span class="line">a.splice(<span class="number">1</span>, <span class="number">0</span>, <span class="number">2</span>); <span class="comment">// []  在 删除位置的前面添加了</span></span><br><span class="line">a; <span class="comment">// [1, 2, 1, 1]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>如果只提供第一个参数，等同于将原数组在指定位置拆分成两个数组。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">a.splice(<span class="number">2</span>); <span class="comment">// [3, 4]</span></span><br><span class="line">a; <span class="comment">// [1, 2]</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="reverse-sort"><a href="#reverse-sort" class="headerlink" title="reverse/sort"></a>reverse/sort</h6><ol>
+<li><strong>reverse</strong>方法用于颠倒排列数组元素，返回改变后的数组(还是原数组)。注意，该方法将改变原数组。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.reverse(); <span class="comment">// [&quot;c&quot;, &quot;b&quot;, &quot;a&quot;]</span></span><br><span class="line">a; <span class="comment">// [&quot;c&quot;, &quot;b&quot;, &quot;a&quot;]</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li><strong>sort</strong>方法对数组成员进行排序，默认是按照字典顺序排序。排序后，原数组将被改变。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">&quot;d&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;a&quot;</span>]</span><br><span class="line">  .sort()</span><br><span class="line">  [</span><br><span class="line">    <span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]</span></span><br><span class="line">    (<span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">  ].sort()</span><br><span class="line">  [</span><br><span class="line">    <span class="comment">// [1, 2, 3, 4]</span></span><br><span class="line">    (<span class="number">11</span>, <span class="number">101</span>)</span><br><span class="line">  ].sort()</span><br><span class="line">  [</span><br><span class="line">    <span class="comment">// [101, 11]</span></span><br><span class="line">    (<span class="number">10111</span>, <span class="number">1101</span>, <span class="number">111</span>)</span><br><span class="line">  ].sort();</span><br><span class="line"><span class="comment">// [10111, 1101, 111]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码的最后两个例子，需要特殊注意。sort 方法不是按照大小排序，而是按照字典顺序。也就是说，数值会被先转成字符串，再按照字典顺序进行比较，所以 101 排在 11 的前面。</p>
+<p>如果想让 sort 方法按照自定义方式排序，可以传入一个函数作为参数。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">10111</span>, <span class="number">1101</span>, <span class="number">111</span>].sort(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a - b; <span class="comment">//升序</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// [111, 1101, 10111]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，sort 的参数函数本身接受两个参数，表示进行比较的两个数组成员。如果该函数的返回值大于 0，表示第一个成员排在第二个成员后面；其他情况下，都是第一个元素排在第二个元素前面</p>
+<h6 id="join"><a href="#join" class="headerlink" title="join"></a>join</h6><p>join 方法以指定参数作为分隔符，将所有数组成员连接为一个字符串返回。如果不提供参数，默认用逗号分隔。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">a.join(<span class="string">&#x27; &#x27;</span>) <span class="comment">// &#x27;1 2 3 4&#x27;</span></span><br><span class="line">a.join(<span class="string">&#x27; | &#x27;</span>) <span class="comment">// &quot;1 | 2 | 3 | 4&quot;</span></span><br><span class="line">a.join() <span class="comment">// &quot;1,2,3,4&quot;</span></span><br><span class="line"><span class="comment">//如果数组成员是undefined或null或空位，会被转成空字符串。</span></span><br><span class="line">[<span class="literal">undefined</span>, <span class="literal">null</span>].join(<span class="string">&#x27;#&#x27;</span>)</span><br><span class="line"><span class="comment">// &#x27;#&#x27;</span></span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>,, <span class="string">&#x27;b&#x27;</span>].join(<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line"><span class="comment">// &#x27;a--b&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>数组的遍历（for）<br>整数数组/字符串数组/对象数组/二维数组<br><code>for-in</code>循环 <code>for(var i in arr)</code>i 是下标<br><code>for(var i in obj)</code> i 是属性名<br>函数的值传递和引用传递<br>堆和栈及索引思维<br>JSON 表示对象的方法<br>随机点名程序<br>数组的排序（冒泡，选择）</p>
+<h4 id="数组的冒泡排序"><a href="#数组的冒泡排序" class="headerlink" title="数组的冒泡排序"></a>数组的冒泡排序</h4><p><a target="_blank" rel="noopener" href="http://v.youku.com/v_show/id_XMzMyOTAyMzQ0.html">冒泡排序的视频</a></p>
+<p>思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。</p>
+<p>即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>];</span><br><span class="line"><span class="comment">//1,5,3,2,4</span></span><br><span class="line"><span class="comment">//1 , 3,5,2,4</span></span><br><span class="line"><span class="comment">//1,3   2,5,4</span></span><br><span class="line"><span class="comment">//1,3,2    4,      5</span></span><br><span class="line"><span class="comment">//外层循环 执行4 次，每次找到一个最大的数字放在 尾部</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span> - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">      <span class="comment">//交换数组两个元素的值</span></span><br><span class="line">      <span class="keyword">var</span> t = arr[j];</span><br><span class="line">      arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">      arr[j + <span class="number">1</span>] = t;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><p>思路分析：选择排序和冒泡排序类似，跟冒泡不同之处在于，它不是每比较一次就调换位置，<br>而是一轮比较完毕，找到最大值(或者最小值)之后，将其放在正确的位置，其他数的位置不变。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//选择排序 ，每次选择一个最小值 ，放特定位置上</span></span><br><span class="line"><span class="comment">//外层控制比较轮数，每轮找到最小值 跟i位置上的元素进行交换</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">var</span> minIndex = i;</span><br><span class="line">  <span class="keyword">var</span> min = array[i];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; array.length; j++) &#123;</span><br><span class="line">    <span class="comment">//当循环出来的元素 比最小值 小的时候，最小值发生变化，最小值索引也变化</span></span><br><span class="line">    <span class="keyword">if</span> (min &gt; array[j]) &#123;</span><br><span class="line">      min = array[j];</span><br><span class="line">      minIndex = j;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//确定了最小值以后需要给  i位置上的元素进行交换</span></span><br><span class="line">  <span class="keyword">if</span> (minIndex != i) &#123;</span><br><span class="line">    <span class="keyword">var</span> tmp = array[i];</span><br><span class="line">    array[i] = array[minIndex];</span><br><span class="line">    array[minIndex] = tmp;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/%E6%95%B0%E7%BB%84/">数组</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/29/DOM%E8%A1%A5%E5%85%85/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DOM补充
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/29/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7-%E4%BA%8C/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">CSS核心属性(二)</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

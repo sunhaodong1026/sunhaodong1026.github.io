@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>关于ES5和字符串string | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="ECMAScript 发展史ECMAScript 是一种由 ECMA 国际（前身为欧洲计算机制造商协会,英文名称是 European Computer Manufacturers Association）通过 ECMA-262 标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，所以它可以理解为是 javascript 的一个标准,但实际上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于ES5和字符串string">
+<meta property="og:url" content="http://yoursite.com/2020/08/20/%E5%85%B3%E4%BA%8EES5%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2string/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="ECMAScript 发展史ECMAScript 是一种由 ECMA 国际（前身为欧洲计算机制造商协会,英文名称是 European Computer Manufacturers Association）通过 ECMA-262 标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，所以它可以理解为是 javascript 的一个标准,但实际上">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-20T13:22:09.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:14:07.765Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="ES5">
+<meta property="article:tag" content="string">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-关于ES5和字符串string"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      关于ES5和字符串string
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/08/20/%E5%85%B3%E4%BA%8EES5%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2string/" class="article-date">
+  <time datetime="2020-08-20T13:22:09.000Z" itemprop="datePublished">2020-08-20</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/string/" rel="tag">string</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="ECMAScript-发展史"><a href="#ECMAScript-发展史" class="headerlink" title="ECMAScript 发展史"></a>ECMAScript 发展史</h4><p>ECMAScript 是一种由 ECMA 国际（前身为欧洲计算机制造商协会,英文名称是 European Computer Manufacturers Association）通过 ECMA-262 标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，所以它可以理解为是 javascript 的一个标准,但实际上后两者是 ECMA-262 标准的实现和扩展。</p>
+<a id="more"></a>
+
+<p>1998 年 6 月，ECMAScript 2.0 版发布。<br>1999 年 12 月，ECMAScript 3.0 版发布，成为 JavaScript 的通行标准，得到了广泛支持。<br>2007 年 10 月，ECMAScript 4.0 版草案发布，对 3.0 版做了大幅升级，预计次年 8 月发布正式版本。草案发布后，由于 4.0 版的目标过于激进，各方对于是否通过这个标准，发生了严重分歧。以 Yahoo、Microsoft、Google 为首的大公司，反对 JavaScript 的大幅升级，主张小幅改动；以 JavaScript 创造者 Brendan Eich 为首的 Mozilla 公司，则坚持当前的草案。<br>2008 年 7 月，由于对于下一个版本应该包括哪些功能，各方分歧太大，争论过于激进，ECMA 开会决定，中止 ECMAScript 4.0 的开发，将其中涉及现有功能改善的一小部分，发布为 ECMAScript 3.1，而将其他激进的设想扩大范围，放入以后的版本，由于会议的气氛，该版本的项目代号起名为 Harmony（和谐）。会后不久，ECMAScript 3.1 就改名为 ECMAScript 5。<br>2009 年 12 月，ECMAScript 5.0 版正式发布。Harmony 项目则一分为二，一些较为可行的设想定名为 JavaScript.next 继续开发，后来演变成 ECMAScript 6；一些不是很成熟的设想，则被视为 JavaScript.next.next，在更远的将来再考虑推出。<br>2011 年 6 月，ECMAscript 5.1 版发布，并且成为 ISO 国际标准（ISO/IEC 16262:2011）。<br>2013 年 3 月，ECMAScript 6 草案冻结，不再添加新功能。新的功能设想将被放到 ECMAScript 7。<br>2013 年 12 月，ECMAScript 6 草案发布。然后是 12 个月的讨论期，听取各方反馈。<br>2015 年 6 月 17 日，ECMAScript 6 发布正式版本，即 ECMAScript 2015。</p>
+<h4 id="ES5-严格模式"><a href="#ES5-严格模式" class="headerlink" title="ES5 严格模式"></a>ES5 严格模式</h4><h6 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h6><p>除了正常的运行模式，JavaScript 还有第二种运行模式：严格模式（strict mode）。顾名思义，这种模式采用更加严格的 JavaScript 语法。<br>同样的代码，在正常模式和严格模式中，可能会有不一样的运行结果。一些在正常模式下可以运行的语句，在严格模式下将不能运行。</p>
+<h6 id="设计目的"><a href="#设计目的" class="headerlink" title="设计目的"></a>设计目的</h6><p>早期的 JavaScript 语言有很多设计不合理的地方，但是为了兼容以前的代码，又不能改变老的语法，只能不断添加新的语法，引导程序员使用新语法。<br>严格模式是从 ES5 进入标准的，主要目的有以下几个。</p>
+<ol>
+<li>明确禁止一些不合理、不严谨的语法，减少 JavaScript 语言的一些怪异行为。</li>
+<li>增加更多报错的场合，消除代码运行的一些不安全之处，保证代码运行的安全。</li>
+<li>提高编译器效率，增加运行速度。</li>
+<li>为未来新版本的 JavaScript 语法做好铺垫。<br>总之，严格模式体现了 JavaScript 更合理、更安全、更严谨的发展方向</li>
+</ol>
+<h6 id="启用方法"><a href="#启用方法" class="headerlink" title="启用方法"></a>启用方法</h6><p>进入严格模式的标志，是一行字符串 use strict。<br>‘use strict’;<br>老版本的引擎会把它当作一行普通字符串，加以忽略。新版本的引擎就会进入严格模式。<br>严格模式可以用于整个脚本，也可以只用于单个函数</p>
+<ol>
+<li>整个脚本文件<br>use strict 放在脚本文件的第一行，整个脚本都将以严格模式运行。如果这行语句不在第一行就无效，整个脚本会以正常模式运行。(严格地说，只要前面不是产生实际运行结果的语句，use strict 可以不在第一行，比如直接跟在一个空的分号后面，或者跟在注释后面。)</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;<span class="string">&#x27;use strict&#x27;</span>; <span class="built_in">console</span>.log(<span class="string">&#x27;这是严格模式&#x27;</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;<span class="built_in">console</span>.log(<span class="string">&#x27;这是正常模式&#x27;</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，一个网页文件依次有两段 JavaScript 代码。前一个<code>&lt;script&gt;</code>标签是严格模式，后一个不是。<br>如果 use strict 写成下面这样，则不起作用，严格模式必须从代码一开始就生效。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;<span class="built_in">console</span>.log(<span class="string">&#x27;这是正常模式&#x27;</span>); <span class="string">&#x27;use strict&#x27;</span>;&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>单个函数<br>use strict 放在函数体的第一行，则整个函数以严格模式运行。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strict</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &quot;use strict&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;这是严格模式&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notStrict</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;这是正常模式&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="严格模式下的要求"><a href="#严格模式下的要求" class="headerlink" title="严格模式下的要求"></a>严格模式下的要求</h6><p>变量声明（必须要使用 var）<br>函数不能有重名的参数<br>正常模式下，如果函数有多个重名的参数，可以用 arguments[i]读取。严格模式下，这属于语法错误。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, a, b</span>) </span>&#123;</span><br><span class="line"><span class="meta">  &quot;use strict&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>禁止八进制的前缀 0 表示法<br>正常模式下，整数的第一位如果是 0，表示这是八进制数，比如 0100 等于十进制的 64。严格模式禁止这种表示法，整数第一位为 0，将报错。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> n = <span class="number">0100</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>禁止 this 关键字指向全局对象<br>正常模式下，函数内部的 this 可能会指向全局对象（window），严格模式禁止这种用法，避免无意间创造全局变量。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 正常模式</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span> === <span class="built_in">window</span>);</span><br><span class="line">&#125;</span><br><span class="line">f(); <span class="comment">// true</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 严格模式</span></span><br><span class="line"><span class="meta">  &quot;use strict&quot;</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span> === <span class="literal">undefined</span>);</span><br><span class="line">&#125;</span><br><span class="line">f(); <span class="comment">// true</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，严格模式的函数体内部 this 是 undefined。这种限制对于构造函数尤其有用。使用构造函数时，有时忘了加 new，这时 this 不再指向全局对象，而是报错。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &quot;use strict&quot;</span>;</span><br><span class="line">  <span class="built_in">this</span>.a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">f(); <span class="comment">// 报错，this 未定义</span></span><br></pre></td></tr></table></figure></div>
+
+<p>严格模式下，使用 with 语句将报错。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">v</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="keyword">with</span> (obj) &#123;</span><br><span class="line">  v = <span class="number">2</span>; <span class="comment">//obj.v = 2;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="创设-eval-作用域"><a href="#创设-eval-作用域" class="headerlink" title="创设 eval 作用域"></a>创设 eval 作用域</h6><p>正常模式下，JavaScript 语言有两种变量作用域（scope）：全局作用域和函数作用域。严格模式创设了第三种作用域：eval 作用域。</p>
+<p>正常模式下，eval 语句的作用域，取决于它处于全局作用域，还是函数作用域。严格模式下，eval 语句本身就是一个作用域，不再能够在其所运行的作用域创设新的变量了，也就是说，eval 所生成的变量只能用于 eval 内部。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &quot;use strict&quot;</span>;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">eval</span>(<span class="string">&quot;var x = 5; x&quot;</span>)); <span class="comment">// 5</span></span><br><span class="line">  <span class="built_in">console</span>.log(x); <span class="comment">// 2</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，由于 eval 语句内部是一个独立作用域，所以内部的变量 x 不会泄露到外部</p>
+<h4 id="ES5-新增的数组方法"><a href="#ES5-新增的数组方法" class="headerlink" title="ES5 新增的数组方法"></a>ES5 新增的数组方法</h4><h6 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h6><p>Array.isArray()<br>Array.isArray 方法返回一个布尔值，表示参数是否为数组。它可以弥补 typeof 运算符的不足。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">typeof</span> arr; <span class="comment">// &quot;object&quot;</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(arr); <span class="comment">// true</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，typeof 运算符只能显示数组的类型是 Object，而 Array.isArray 方法可以识别数组。</p>
+<h6 id="实例（对象）方法"><a href="#实例（对象）方法" class="headerlink" title="实例（对象）方法"></a>实例（对象）方法</h6><ol>
+<li><strong>map</strong>方法将数组的所有成员依次传入参数函数，然后把每一次的执行结果组成一个新数组返回。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> res = numbers.map(<span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n + <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br><span class="line">res; <span class="comment">// [2, 3, 4]</span></span><br><span class="line">numbers;</span><br><span class="line"><span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，numbers 数组的所有成员依次执行参数函数，运行结果组成一个新数组返回，原数组没有变化。<br>map 方法接受一个函数作为参数。该函数调用时，map 方法向它传入三个参数：当前成员、当前位置和数组本身。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(<span class="function"><span class="keyword">function</span> (<span class="params">elem, index, arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> elem * index;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// [0, 2, 6]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，map 方法的回调函数有三个参数，elem 为当前成员的值，index 为当前成员的位置，arr 为原数组（[1, 2, 3]）</p>
+<ol start="2">
+<li><strong>forEach</strong>方法与 map 方法很相似，也是对数组的所有成员依次执行参数函数。但是，forEach 方法不返回值，只用来操作数据。这就是说，如果数组遍历的目的是为了得到返回值，那么使用 map 方法，否则使用 forEach 方法。<br>forEach 的用法与 map 方法一致，参数是一个函数，该函数同样接受三个参数：当前值、当前位置、整个数组。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">element, index, array</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;[&quot;</span> + index + <span class="string">&quot;] = &quot;</span> + element);</span><br><span class="line">&#125;</span><br><span class="line">[<span class="number">2</span>, <span class="number">5</span>, <span class="number">9</span>].forEach(log);</span><br><span class="line"><span class="comment">// [0] = 2</span></span><br><span class="line"><span class="comment">// [1] = 5</span></span><br><span class="line"><span class="comment">// [2] = 9</span></span><br></pre></td></tr></table></figure></div>
+
+<p>注意，forEach 方法无法中断执行，总是会将所有成员遍历完。如果希望符合某种条件时，就中断遍历，要使用 for 循环。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr[i] === <span class="number">2</span>) <span class="keyword">break</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li><strong>filter</strong>方法用于过滤数组成员，满足条件的成员组成一个新数组返回。<br>它的参数是一个函数，所有数组成员依次执行该函数，返回结果为 true 的成员组成一个新数组返回。该方法不会改变原数组。<br>filter 方法的参数函数可以接受三个参数：当前成员，当前位置和整个数组。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> res = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].filter(<span class="function"><span class="keyword">function</span> (<span class="params">elem, index, arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> index % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line">&#125;);</span><br><span class="line">res; <span class="comment">// [1, 3, 5]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码返回偶数位置的成员组成的新数组。</p>
+<ol start="4">
+<li><strong>reduce</strong>方法依次处理数组的每个成员，最终累计为一个值。reduce 是从左到右处理（从第一个成员到最后一个成员）<br>reduce 方法参数是一个函数,该函数接受以下两个参数。<br>1 累积变量，默认为数组的第一个成员<br>2 当前变量，默认为数组的第二个成员</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> res = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].reduce(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a, b);</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 1 2</span></span><br><span class="line"><span class="comment">// 3 3</span></span><br><span class="line"><span class="comment">// 6 4</span></span><br><span class="line"><span class="comment">// 10 5</span></span><br><span class="line">res; <span class="comment">//最后结果：15</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，reduce 方法求出数组所有成员的和。第一次执行，a 是数组的第一个成员 1，b 是数组的第二个成员 2。第二次执行，a 为上一轮的返回值 3，b 为第三个成员 3。第三次执行，a 为上一轮的返回值 6，b 为第四个成员 4。第四次执行，a 为上一轮返回值 10，b 为第五个成员 5。至此所有成员遍历完成，整个方法的返回值就是最后一轮的返回值 15。</p>
+<ol start="5">
+<li><code>indexOf(),lastIndexOf()</code><br>indexOf 方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">a.indexOf(<span class="string">&quot;b&quot;</span>); <span class="comment">// 1</span></span><br><span class="line">a.indexOf(<span class="string">&quot;y&quot;</span>) <span class="comment">// -1</span></span><br><span class="line">  [</span><br><span class="line">    <span class="comment">//indexOf方法还可以接受第二个参数，表示搜索的开始位置。</span></span><br><span class="line">    (<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>)</span><br><span class="line">  ].indexOf(<span class="string">&quot;a&quot;</span>, <span class="number">1</span>); <span class="comment">// -1</span></span><br><span class="line"><span class="comment">//上面代码从1号位置开始搜索字符a，结果为-1，表示没有搜索到。</span></span><br></pre></td></tr></table></figure></div>
+
+<p>lastIndexOf 方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回-1。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">2</span>];</span><br><span class="line">a.lastIndexOf(<span class="number">2</span>); <span class="comment">// 3</span></span><br><span class="line">a.lastIndexOf(<span class="number">7</span>); <span class="comment">// -1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>注意，这两个方法不能用来搜索 NaN 的位置，即它们无法确定数组成员是否包含 NaN。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="literal">NaN</span>]</span><br><span class="line">  .indexOf(<span class="literal">NaN</span>) <span class="comment">// -1</span></span><br><span class="line">  [<span class="literal">NaN</span>].lastIndexOf(<span class="literal">NaN</span>); <span class="comment">// -1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>这是因为这两个方法内部，使用严格相等运算符（===）进行比较，<br>而 NaN 是唯一一个不等于自身的值</p>
+<h4 id="字符串-string"><a href="#字符串-string" class="headerlink" title="字符串 string"></a>字符串 string</h4><h6 id="字符串的创建方式"><a href="#字符串的创建方式" class="headerlink" title="字符串的创建方式"></a>字符串的创建方式</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line"><span class="keyword">typeof</span> s1; <span class="comment">// &quot;string&quot;</span></span><br><span class="line"><span class="keyword">typeof</span> s2; <span class="comment">// &quot;object&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，变量 s1 是字符串，s2 是对象。<br>所以,String 对象也叫包装对象<br>除了用作构造函数，String 对象还可以当作工具方法使用，将任意类型的值转为字符串。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>(<span class="literal">true</span>); <span class="comment">// &quot;true&quot;</span></span><br><span class="line"><span class="built_in">String</span>(<span class="number">5</span>); <span class="comment">// &quot;5&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码将布尔值 ture 和数值 5，分别转换为字符串</p>
+<p>字符串实例的 length 属性返回字符串的长度。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;abc&quot;</span>.length; <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></div>
+
+<p>字符串对象是一个类似数组的对象（很像数组，但不是数组）。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;abc&quot;</span>)(</span><br><span class="line">  <span class="comment">// String &#123;0: &quot;a&quot;, 1: &quot;b&quot;, 2: &quot;c&quot;, length: 3&#125;</span></span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;abc&quot;</span>)</span><br><span class="line">)[<span class="number">1</span>]; <span class="comment">// &quot;b&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，字符串 abc 对应的字符串对象，有数值键（0、1、2）和 length 属性，所以可以像数组那样取值。</p>
+<h6 id="charAt-方法"><a href="#charAt-方法" class="headerlink" title="charAt 方法"></a>charAt 方法</h6><p>charAt 方法返回指定位置的字符，参数是从 0 开始编号的位置。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">s.charAt(<span class="number">1</span>); <span class="comment">// &quot;b&quot;</span></span><br><span class="line">s.charAt(s.length - <span class="number">1</span>); <span class="comment">// &quot;c&quot;</span></span><br><span class="line"><span class="comment">//这个方法完全可以用数组下标替代。</span></span><br><span class="line"><span class="string">&quot;abc&quot;</span>.charAt(<span class="number">1</span>); <span class="comment">// &quot;b&quot;</span></span><br><span class="line"><span class="string">&quot;abc&quot;</span>[<span class="number">1</span>]; <span class="comment">// &quot;b&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice 方法"></a>slice 方法</h6><p>slice 方法用于从原字符串取出子字符串并返回，不改变原字符串。它的第一个参数是子字符串的开始位置，第二个参数是子字符串的结束位置（不含该位置）。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;JavaScript&quot;</span>.slice(<span class="number">0</span>, <span class="number">4</span>); <span class="comment">// &quot;Java&quot;</span></span><br><span class="line"><span class="comment">//如果省略第二个参数，则表示子字符串一直到原字符串结束。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.slice(<span class="number">4</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="comment">//如果参数是负值，表示从结尾开始倒数计算的位置，即该负值加上字符串长度。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.slice(<span class="number">-6</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.slice(<span class="number">0</span>, <span class="number">-6</span>); <span class="comment">// &quot;Java&quot;</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.slice(<span class="number">-2</span>, <span class="number">-1</span>); <span class="comment">// &quot;p&quot;</span></span><br><span class="line"><span class="comment">//如果第一个参数大于第二个参数，slice方法返回一个空字符串。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.slice(<span class="number">2</span>, <span class="number">1</span>); <span class="comment">//</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="substring-方法"><a href="#substring-方法" class="headerlink" title="substring 方法"></a>substring 方法</h6><p>substring 方法用于从原字符串取出子字符串并返回，不改变原字符串，跟 slice 方法很相像。它的第一个参数表示子字符串的开始位置，第二个位置表示结束位置（返回结果不含该位置）。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substring(<span class="number">0</span>, <span class="number">4</span>); <span class="comment">// &quot;Java&quot;</span></span><br><span class="line"><span class="comment">//如果省略第二个参数，则表示子字符串一直到原字符串的结束。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substring(<span class="number">4</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="comment">//如果第二个参数大于第一个参数，substring方法会自动更换两个参数的位置。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substring(<span class="number">10</span>, <span class="number">4</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substring(<span class="number">4</span>, <span class="number">10</span>); <span class="comment">// &quot;Script&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="substr-方法"><a href="#substr-方法" class="headerlink" title="substr 方法"></a>substr 方法</h6><p>substr 方法用于从原字符串取出子字符串并返回，不改变原字符串，跟 slice 和 substring 方法的作用相同。<br>substr 方法的第一个参数是子字符串的开始位置（从 0 开始计算），第二个参数是子字符串的长度。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substr(<span class="number">4</span>, <span class="number">6</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="comment">//如果省略第二个参数，则表示子字符串一直到原字符串的结束。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substr(<span class="number">4</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="comment">//如果第一个参数是负数，表示倒数计算的字符位置。如果第二个参数是负数，将被自动转为0，因此会返回空字符串。</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substr(<span class="number">-6</span>); <span class="comment">// &quot;Script&quot;</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.substr(<span class="number">4</span>, <span class="number">-1</span>); <span class="comment">// &quot;&quot;</span></span><br><span class="line"><span class="comment">//上面代码中，第二个例子的参数-1自动转为0，表示子字符串长度为0，所以返回空字符串</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="indexOf-方法"><a href="#indexOf-方法" class="headerlink" title="indexOf 方法"></a>indexOf 方法</h6><p>indexOf 方法用于确定一个字符串在另一个字符串中第一次出现的位置，返回结果是匹配开始的位置。如果返回-1，就表示不匹配。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello world&quot;</span>.indexOf(<span class="string">&quot;o&quot;</span>); <span class="comment">// 4</span></span><br><span class="line"><span class="string">&quot;JavaScript&quot;</span>.indexOf(<span class="string">&quot;script&quot;</span>); <span class="comment">// -1</span></span><br><span class="line"><span class="comment">//indexOf方法还可以接受第二个参数，表示从该位置开始向后匹配。</span></span><br><span class="line"><span class="string">&quot;hello world&quot;</span>.indexOf(<span class="string">&quot;o&quot;</span>, <span class="number">6</span>); <span class="comment">// 7</span></span><br><span class="line"><span class="comment">//lastIndexOf方法的用法跟indexOf方法一致，主要的区别是lastIndexOf从尾部开始匹配，indexOf则是从头部开始匹配。</span></span><br><span class="line"><span class="string">&quot;hello world&quot;</span>.lastIndexOf(<span class="string">&quot;o&quot;</span>); <span class="comment">// 7</span></span><br><span class="line"><span class="comment">//另外，lastIndexOf的第二个参数表示从该位置起向前匹配。</span></span><br><span class="line"><span class="string">&quot;hello world&quot;</span>.lastIndexOf(<span class="string">&quot;o&quot;</span>, <span class="number">6</span>); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="trim-方法"><a href="#trim-方法" class="headerlink" title="trim 方法"></a>trim 方法</h6><p>trim 方法用于去除字符串两端的空格，返回一个新字符串，不改变原字符串。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello world&quot;</span>.trim();</span><br><span class="line"><span class="comment">// &quot;hello world&quot;</span></span><br><span class="line"><span class="comment">//该方法去除的不仅是空格，还包括制表符（\t、\v）、换行符（\n）和回车符（\r）。</span></span><br><span class="line"><span class="string">&quot;\r\nabc \t&quot;</span>.trim(); <span class="comment">// &#x27;abc&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="toLowerCase-方法"><a href="#toLowerCase-方法" class="headerlink" title="toLowerCase 方法"></a>toLowerCase 方法</h6><p>toLowerCase 方法用于将一个字符串全部转为小写，toUpperCase 则是全部转为大写。它们都返回一个新字符串，不改变原字符串。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Hello World&quot;</span>.toLowerCase();</span><br><span class="line"><span class="comment">// &quot;hello world&quot;</span></span><br><span class="line"><span class="string">&quot;Hello World&quot;</span>.toUpperCase();</span><br><span class="line"><span class="comment">// &quot;HELLO WORLD&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="replace-方法"><a href="#replace-方法" class="headerlink" title="replace 方法"></a>replace 方法</h6><p>replace 方法用于替换匹配的子字符串，一般情况下只替换第一个匹配（除非使用带有 g 修饰符的正则表达式）。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;aaa&quot;</span>.replace(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>); <span class="comment">// &quot;baa&quot;</span></span><br><span class="line"><span class="string">&quot;aaa&quot;</span>.replace(<span class="regexp">/a/g</span>, <span class="string">&quot;b&quot;</span>); <span class="comment">// &quot;bbb&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="split-方法"><a href="#split-方法" class="headerlink" title="split 方法"></a>split 方法</h6><p>split 方法按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;a|b|c&quot;</span>.split(<span class="string">&quot;|&quot;</span>); <span class="comment">// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span></span><br><span class="line"><span class="comment">//如果分割规则为空字符串，则返回数组的成员是原字符串的每一个字符。</span></span><br><span class="line"><span class="string">&quot;a|b|c&quot;</span>.split(<span class="string">&quot;&quot;</span>); <span class="comment">// [&quot;a&quot;, &quot;|&quot;, &quot;b&quot;, &quot;|&quot;, &quot;c&quot;]</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="ASCII-码和字符集"><a href="#ASCII-码和字符集" class="headerlink" title="ASCII 码和字符集"></a>ASCII 码和字符集</h4><p>字符串常见 API(charCodeAt\fromCharCode)<br><code>charCodeAt</code>方法返回字符串指定位置的 Unicode 码点（十进制表示），相当于<code>String.fromCharCode()</code>的逆操作。<br><code>&#39;abc&#39;.charCodeAt(1) // 98</code><br>上面代码中，abc 的 1 号位置的字符是 b，它的 Unicode 码点是 98。<br><code>String.fromCharCode()</code><br>String 对象提供的静态方法（即定义在对象本身，而不是定义在对象实例的方法），主要是<code>String.fromCharCode()</code>。该方法的参数是一个或多个数值，代表 Unicode 码点，返回值是这些码点组成的字符串。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>.fromCharCode(); <span class="comment">// &quot;&quot;</span></span><br><span class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">97</span>); <span class="comment">// &quot;a&quot;</span></span><br><span class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">104</span>, <span class="number">101</span>, <span class="number">108</span>, <span class="number">108</span>, <span class="number">111</span>);</span><br><span class="line"><span class="comment">// &quot;hello&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>统计字符串中每个字符的个数</p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/%E5%85%B3%E4%BA%8EES5%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2string/">关于 ES5 和字符串 string</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/21/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            宽高自适应
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/16/%E5%AE%9A%E4%BD%8D%E9%94%9A%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">定位锚点</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

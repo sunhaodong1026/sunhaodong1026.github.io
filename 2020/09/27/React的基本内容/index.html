@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>React的基本内容 | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="React 简介   声明式 (只需要告诉框架需要做什么，而不需要告诉他该怎么做，跟声明式对立的是命令式，比如 Jquery) 组件化 (Vue 中声明全局组件的方式 Vue.component 组件名 组件最大的好处是可以复用) 一次学习，随处编写 (React 可以写原生应用(ReactNative)和网页应用)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React的基本内容">
+<meta property="og:url" content="http://yoursite.com/2020/09/27/React%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="React 简介   声明式 (只需要告诉框架需要做什么，而不需要告诉他该怎么做，跟声明式对立的是命令式，比如 Jquery) 组件化 (Vue 中声明全局组件的方式 Vue.component 组件名 组件最大的好处是可以复用) 一次学习，随处编写 (React 可以写原生应用(ReactNative)和网页应用)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-27T04:04:16.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:04:23.877Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="React">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-React的基本内容"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      React的基本内容
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/09/27/React%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9/" class="article-date">
+  <time datetime="2020-09-27T04:04:16.000Z" itemprop="datePublished">2020-09-27</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/" rel="tag">React</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <blockquote>
+<p>React 简介</p>
+</blockquote>
+<ol>
+<li>声明式 (只需要告诉框架需要做什么，而不需要告诉他该怎么做，跟声明式对立的是命令式，比如 Jquery)</li>
+<li>组件化 (Vue 中声明全局组件的方式 Vue.component 组件名 组件最大的好处是可以复用)</li>
+<li>一次学习，随处编写 (React 可以写原生应用(ReactNative)和网页应用)</li>
+</ol>
+<a id="more"></a>
+
+<blockquote>
+<p>React 分为五个部分</p>
+</blockquote>
+<ol>
+<li>Jsx 语法</li>
+<li>Component 组件</li>
+<li>路由</li>
+<li>状态管理</li>
+<li>第三方工具</li>
+</ol>
+<blockquote>
+<p>React 和 Vue 的不同</p>
+</blockquote>
+<p>Vue 是官方维护的，而 React 是社区维护的</p>
+<blockquote>
+<p>React 开发环境搭建</p>
+</blockquote>
+<h2 id="引用文件的方式"><a href="#引用文件的方式" class="headerlink" title="引用文件的方式"></a>引用文件的方式</h2><h6 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h6><ol>
+<li><p>建立一个项目的目录<br>进入项目 打开终端 npm init -y<br>会在目录中产生一个 package.json 文件</p>
+</li>
+<li><p>npm I react –save 或 yarn add react(有 yarn 的)<br>会在目录中产生项目依赖目录 node_modules<br>进入 node_modules react umd 找到 react.development.js<br>粘贴到项目目录下的 js 文件夹里</p>
+</li>
+<li><p>终端里 npm I react-dom –save 或 yarn add react-dom(有 yarn 的)<br>进入 node-modules react-dom umd 找到 react-dom.development.js<br>粘贴到项目目录下的 js 文件夹里<br>创建 html 文件<br>按顺序依次引入 react.development.js react-dom.development.js 文件</p>
+<p>可以实现 hello word 的呈现<br>ReactDOM.render(“hello world”,document.getElementById(“box”))</p>
+<p>此处只能渲染出来文本内容，渲染不出来带标签的内容，需要下载 babel 包</p>
+</li>
+<li><p>npm i babel-standalone 或 yarn add babel-standalone<br>进入 node_modules babel-standalone<br>复制 babel.js 粘贴到 js 文件夹里面<br>再在 html 里面接着引入</p>
+<p>如果使用了 babel.js</p>
+<p>那么用 script 标签的时候就要加入 type=text/babel</p>
+<p>就可以实现标签的呈现</p>
+</li>
+<li><p>在 html 文件中的引入顺序<br>a react.development.js<br>b react-dom.development.js<br>c babel.js</p>
+</li>
+<li><p>注意这个问题<br>script 的 type 属性指定为 text/babel</p>
+</li>
+<li><p>babel<br>es6 转为 es5<br>解析 jsx</p>
+</li>
+<li><p>什么是 jsx<br>jsx 是一种语法糖<br>jsx 是 javascript 扩展的意思<br>相当于 js+xml<br>jsx 不是必须的，但是用 jsx 可以提高开发效率<br>jsx 的原理就是</p>
+</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">React.creatElement(tag,&#123;attrs&#125;,content)</span><br></pre></td></tr></table></figure></div>
+
+<ol start="9">
+<li>react 的差值表达式是一对大括号 即为引用变量的写法</li>
+<li>jsx 注意事项<br>a 对象不能直接渲染,数组以字符串的形式进行渲染<br>b 在 jsx 中 class 要改为 className<br>c 事件的首字母要大写 如 onClick 形式<br>d 写行内样式</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style&#x3D;&#123;&#123;color:&quot;red&quot;&#125;&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>第一对大括号表示差值表达式，第二对大括号表示差值表达式的值是一个对象</p>
+<h6 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h6><ol>
+<li>react 当中遍历列表要指定 key 值，可以使用 map 方法进行映射(也有其他方式)</li>
+<li>遍历列表的时候注意标签的语义化</li>
+<li>return 后面要有字符</li>
+<li>react 特点 简洁 灵活</li>
+</ol>
+<h6 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h6><ol>
+<li>无状态组件</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const 组件的名字&#x3D;(props)&#x3D;&gt;&#123;</span><br><span class="line">  return jsx表达式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>类组件</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class 组件的名字 extends React.Component&#123;</span><br><span class="line">  render()&#123;</span><br><span class="line">    &#x2F;&#x2F; this 常用的属性 state props refs</span><br><span class="line">    &#x2F;&#x2F; state 是组件内部的数据 props 来自组件外部的数据 refs 标识一个组件的节点</span><br><span class="line">      return jsx表达式</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="遍历对象"><a href="#遍历对象" class="headerlink" title="遍历对象"></a>遍历对象</h6><p>遍历对象的关键就是把对象变成数组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.keys(obj)</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>对象的浅拷贝，扩展运算符， Object.assign</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D; &#123;...obj2&#125;</span><br><span class="line">var obj &#x3D; Object.assign(&#123;&#125;,obj2)</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>jsx 中的注释</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#x2F;*内容*&#x2F;&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li>refs</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;this.refs.标识节点字符串</span><br><span class="line">&#x2F;&#x2F;&lt;node ref&#x3D;&#123;(标识节点的变量)&#x3D;&gt;this.自定义属性&#x3D;表示节点的变量&#125;&gt;</span><br><span class="line">&#x2F;&#x2F;this.自定义属性 就可以找到节点了</span><br></pre></td></tr></table></figure></div>
+
+<ol start="4">
+<li>state 状态</li>
+</ol>
+<p>存值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">constructor(props)&#123;</span><br><span class="line">  super(props); &#x2F;&#x2F; this.props有值</span><br><span class="line">  this.state&#x3D;&#123;</span><br><span class="line">    key:value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>更改 state 的值<br>不能直接改 直接改就会视图不同步<br>要改 state 用 setstate 更改</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123;</span><br><span class="line">  &#x2F;&#x2F;key: 新的value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>setState 连续执行多次，对象会合并，<br>只执行最后那一个 setState 的内容，跟前面的内容没有关系<br>setState 是异步的操作，拿到最新的值要在回调函数里拿</p>
+<ol start="5">
+<li><p>计数器<br>需求 : 计算点击按钮的次数</p>
+</li>
+<li><p>类组件 事件处理函数要绑定 this 或者用箭头函数<br>建议尽量在构造函数 constructor 里绑定 this，因为这样只执行一次绑定</p>
+</li>
+<li><p>事件绑定处理函数，要进行传参<br>this.方法名字.bind(this,参数)<br>事件处理函数的最后一个参数是事件对象</p>
+</li>
+<li><p>setState<br>a) 异步<br>b) 连续执行对象会合并</p>
+</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123;</span><br><span class="line">  key:value</span><br><span class="line">&#125;,callback)</span><br></pre></td></tr></table></figure></div>
+
+<p>c)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.setState((prevState,props)&#x3D;&gt;&#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    key:value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,callback)</span><br></pre></td></tr></table></figure></div>
+
+<p>连续执行多次会放入队列中依次执行</p>
+<ol start="9">
+<li>组件挂载阶段，会自动执行的钩子函数<br>constructor<br>render<br>componentDidMount</li>
+<li>受控组件与非受控组件<br>表单元素他的值来自于 state 这个组件就是受控组件，否则就是非受控组件<br>普通组件来说，它的数据都来自于外部 (props) 这个组件就是受控组件</li>
+<li>类组件的三个属性<br>state refs props 这三个是常用的 还有一个是 context 上下文</li>
+</ol>
+<h4 id="脚手架环境"><a href="#脚手架环境" class="headerlink" title="脚手架环境"></a>脚手架环境</h4><h6 id="基本使用-1"><a href="#基本使用-1" class="headerlink" title="基本使用"></a>基本使用</h6><ol>
+<li>字符串 includes 方法 判断是否含有子串(indexOf)</li>
+<li>dagerouslySetInnerHTML<br>可以渲染 html 的字符串</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JSX"><figure class="iseeu highlight /jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div dagerouslySetInnerHTML=&#123;&#123; <span class="attr">__html</span>: html的字符串 &#125;&#125;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li>脚手架环境安装</li>
+</ol>
+<p>create-react-app #全局安装<br>npm i create-react-app -g<br>create-react-app –version #查看版本号</p>
+<p>能看到版本号就说明安装成功了</p>
+<p>创建项目:<br>create-react-app 项目名字</p>
+<p>src/index.js 就是入口文件</p>
+<p>引入图片</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import 变量 from &#39;图片的路径&#39;</span><br><span class="line">&lt;img src&#x3D;&#123;变量&#125; &#x2F;&gt;</span><br></pre></td></tr></table></figure></div>
+
+<pre><code>或</code></pre>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&#123;require(&quot;图片的路径&quot;)&#125; &#x2F;&gt;&gt;</span><br></pre></td></tr></table></figure></div>
+
+<pre><code>这种方法用于引入多张图片的时候，一张一张导入太麻烦</code></pre>
+<ol start="4">
+<li>导入导出<br>export xxx</li>
+</ol>
+<p>import {xxx} from</p>
+<p>一次导入所有的<br>import * as 名字 from</p>
+<p>然后变量可取用<br>名字.变量名</p>
+<h6 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h6><ol>
+<li>jsx 的规则<br>value 改为 defaultValue<br>checked 改为 defaultChecked<br>onXxx<br>for 改为 htmlFor<br>style 写对象<br>class className<br>{/<em>注释</em>/}</li>
+<li>ref 的第三种使用方式 (a,字符串的方式 b.回调函数的方式)</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">createRef</span><br><span class="line"></span><br><span class="line">this.state&#x3D;&#123;</span><br><span class="line">  变量:createRef()</span><br><span class="line">&#125;</span><br><span class="line">&lt;node ref&#x3D;&#123;this.state.变量&#125; &#x2F;&gt;</span><br><span class="line">引用这个节点</span><br><span class="line">  this.state.变量.current 就可以引用这个节点了</span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li>组件的传值<br>父传子 通过属性传递<br>子传父 调用父组件传递过来的方法</li>
+<li>mock 数据工具</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i json-server -g</span><br><span class="line">json-server --version 可以看到版本号就代表安装成功</span><br></pre></td></tr></table></figure></div>
+
+<p>建立一个 json 文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;list&quot;:[</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;id&quot;:1,</span><br><span class="line">      &quot;name&quot;:&quot;zhangsan&quot;,</span><br><span class="line">      &quot;age&quot;:20</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;id&quot;:2,</span><br><span class="line">      &quot;name&quot;:&quot;lisi&quot;,</span><br><span class="line">      &quot;age&quot;:25</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>在这个文件处打开终端，执行下面的命令，<br>就能把这个文件在指定的端口运行起来<br>json-server xxx.json –port 端口号<br>json-server 模糊查找有两种形式<br>全局查找<br>url?q=查找的关键字<br>以某一个字段进行模糊查找，比如年龄包含 2 的<br>url?age_like=2</p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/React%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9/">React 的基本内容</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/28/HTTP/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            关于HTTP
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/24/localStorage%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">localStorage本地存储</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>jQuery一些基本内容(二) | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="过滤元素eq(index|-index):参数可以为正值也可以为负值，获取第 N 个元素，这个元素的位置从 0 开始，如果是负数，则从集合中的最后一个元素开始倒数，参数为-1 就是最后一个元素，-2 就是倒数第二个元素。first():获取第一个元素。last():获取最后一个元素。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery一些基本内容(二)">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%BA%8C/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="过滤元素eq(index|-index):参数可以为正值也可以为负值，获取第 N 个元素，这个元素的位置从 0 开始，如果是负数，则从集合中的最后一个元素开始倒数，参数为-1 就是最后一个元素，-2 就是倒数第二个元素。first():获取第一个元素。last():获取最后一个元素。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-03T12:28:13.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:02:07.847Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="jQuery">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-jQuery一些基本内容-二"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery一些基本内容(二)
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/09/03/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%BA%8C/" class="article-date">
+  <time datetime="2020-09-03T12:28:13.000Z" itemprop="datePublished">2020-09-03</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="过滤元素"><a href="#过滤元素" class="headerlink" title="过滤元素"></a>过滤元素</h4><p>eq(index|-index):参数可以为正值也可以为负值，获取第 N 个元素，这个元素的位置从 0 开始，如果是负数，则从集合中的最后一个元素开始倒数，参数为-1 就是最后一个元素，-2 就是倒数第二个元素。<br>first():获取第一个元素。<br>last():获取最后一个元素。</p>
+<a id="more"></a>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;ul li).eq(-2).css(&#123;background:&#39;red&#39;&#125;);</span><br><span class="line">$(&#39;ul li).first().css(&#123;background:&#39;red&#39;&#125;);</span><br><span class="line">$(&#39;ul li).last().css(&#123;background:&#39;red&#39;&#125;);</span><br><span class="line">&#x2F;&#x2F;过滤之后得出的仍然是个伪数组，所以可以继续调用jq中的方法</span><br></pre></td></tr></table></figure></div>
+
+<p>children([expr]):不传参数是匹配所有子元素，传入参数是匹配其子元素中符合条件的所有子元素。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hello&lt;&#x2F;p&gt;&lt;div&gt;&lt;span&gt;Hello Again&lt;&#x2F;span&gt;&lt;p class&#x3D;&quot;selected&quot;&gt;aaa&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;&lt;p&gt;And Again&lt;&#x2F;p&gt;</span><br><span class="line">&#x2F;&#x2F;查找类名为div中的每个子元素</span><br><span class="line">$(&#39;div&#39;).children()</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在每个div中查找class名为selected的元素</span><br><span class="line">$(&#39;div&#39;).children(&#39;.selected&#39;)</span><br></pre></td></tr></table></figure></div>
+
+<p>parent([expr]):取得一个包含着所有匹配元素的位以父元素的元素集合（匹配父元素，返回的是伪数组）(直接父元素)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;p&gt;Hello&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;selected&quot;&gt;&lt;p&gt;Hello&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;查询p元素的直接父元素</span><br><span class="line">$(&#39;p&#39;).parent()</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;查询p元素的直接父元素中带有这个class名的元素</span><br><span class="line">$(&#39;p&#39;).parent(&#39;.selected&#39;)</span><br></pre></td></tr></table></figure></div>
+
+<p>find(expr):搜索所有与指定表达式匹配的后代元素，相当于$(‘ul li’)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;span&gt;Hello&lt;&#x2F;span&gt;,how are you?&lt;&#x2F;p&gt;</span><br><span class="line">&#x2F;&#x2F;查找所有p元素下的span元素，与$(&#39;p span&#39;)相同</span><br><span class="line">$(&#39;p&#39;).find(&#39;span&#39;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>next([expr]):取得一个包含匹配的元素集合中每一个元素紧邻的后面同辈元素的元素集合。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hello&lt;&#x2F;p&gt;&lt;p class&#x3D;&quot;selected&quot;&gt;Hello Again&lt;&#x2F;p&gt;&lt;div&gt;&lt;span&gt;And Again&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;找到每个段落后面的近邻的同辈元素</span><br><span class="line">$(&#39;p&#39;).next()</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;找到每个段落的后面**紧邻**的同辈元素中类名为selected的元素</span><br><span class="line">$(&#39;p&#39;).next(&#39;selected&#39;)</span><br></pre></td></tr></table></figure></div>
+
+<p>nextAll([expr]):查找当前元素之后所有的同辈元素</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;&#x2F;div&gt;&lt;div&gt;&lt;&#x2F;div&gt;&lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;给第一个div元素之后的所有同辈元素都添加一个class名</span><br><span class="line">$(&#39;div:first&#39;).nextAll().addClass(&#39;after&#39;);</span><br><span class="line"></span><br><span class="line">&lt;div&gt;&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;after&quot;&gt;&lt;&#x2F;div&gt;&lt;div class&#x3D;&quot;after&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>prev([expr]):取得一个包含匹配的元素集合中每一个元素近邻的前一个同辈元素的集合。(紧邻的前一个元素)</p>
+<p>prevAll([expr]):查找当前元素之前所有的同辈元素。</p>
+<p>siblings([expr]):取得一个包含匹配的元素集合中每一个元素的所有唯一同辈元素的元素集合。可以用可选的表达式进行筛选。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hello&lt;&#x2F;p&gt;&lt;div&gt;&lt;span&gt;Hello Again&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&lt;p&gt;And Again&lt;&#x2F;p&gt;</span><br><span class="line">&#x2F;&#x2F;找到每个div的所有同辈元素</span><br><span class="line">$(&#39;div&#39;).siblings()</span><br><span class="line"></span><br><span class="line">&lt;div&gt;&lt;span&gt;Hello&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&lt;p class&#x3D;&quot;selected&quot;&gt;Hello Again&lt;&#x2F;p&gt;&lt;p&gt;And Again&lt;&#x2F;p&gt;</span><br><span class="line">&#x2F;&#x2F;找到每个div的所有同辈元素中带有类名为selected的元素</span><br><span class="line">$(&#39;div&#39;).siblings(&#39;.selected&#39;)</span><br></pre></td></tr></table></figure></div>
+
+<p>end():回到最近的一个“破坏性操作之前”。破坏性操作即为有变化。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;span&gt;Hello&lt;&#x2F;span&gt;,how are you?&lt;&#x2F;p&gt;</span><br><span class="line">&#x2F;&#x2F;选取所有的p元素，查找并选取span子元素，然后再回过来选取p元素</span><br><span class="line">$(&#39;p&#39;).find(&#39;span&#39;).end()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>each(callback):以每一个匹配的元素来作为上下文来执行一个函数。回调函数有两个参数，第一个参数代表索引，第二个参数代表当前遍历到的 DO 对象</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#box li&#39;).each(function(index,val)&#123;</span><br><span class="line">    console.log(index,val)&#x2F;&#x2F;index是下标，val是下标对应的原生dom元素</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>index([selector|element]):搜索屁屁额的元素，并返回相应元素的索引值，从 0 开始计数。如果参数是一组 DOM 元素或者 jQuery 对象，那么返回值就是传递的元素相当于原先集合的位置，如果不传递参数，那么返回值就是这个 jQuery 对象集合中第一个元素相对于其同辈元素的位置。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;item1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li id&#x3D;&quot;one&quot;&gt;item2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li class&#x3D;&quot;one&quot;&gt;item3&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;li class&#x3D;&quot;selected&quot;&gt;item4&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(&#39;li&#39;).click(function name(params) &#123;</span><br><span class="line">    console.log($(this).index());</span><br><span class="line">    &#x2F;&#x2F;此处的index拿到的是被点击的该元素的同辈元素的下标</span><br><span class="line"></span><br><span class="line">    console.log($(this).index(&#39;li&#39;)); &#x2F;&#x2F;与上面的效果相同</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">console.log($(&#39;li&#39;).index(document.getElementsByClassName(&#39;selected&#39;)[0])); &#x2F;&#x2F;返回的是这个Dom对象在原先的li集合中的索引位置</span><br><span class="line"></span><br><span class="line">console.log($(&#39;li&#39;).index($(&#39;#one&#39;))); &#x2F;&#x2F;返回的是这个jQuery对象在li集合中的下标</span><br><span class="line"></span><br><span class="line">console.log($(&#39;#one&#39;).index(&#39;li&#39;)); &#x2F;&#x2F; 传递的是一个选择器，返回id为one的jQuery对象在所有li中的索引位置</span><br><span class="line"></span><br><span class="line">console.log($(&#39;.selected&#39;).index()); &#x2F;&#x2F; 不传递参数，返回的是这个元素在同辈元素中的索引位置</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="DOM-操作"><a href="#DOM-操作" class="headerlink" title="DOM 操作"></a>DOM 操作</h4><h6 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;&lt;div&gt;&lt;&#x2F;div&gt;&#39;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h6 id="内部插入操作"><a href="#内部插入操作" class="headerlink" title="内部插入操作"></a>内部插入操作</h6><p>append(content)：向每个匹配的元素内部追加内容。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).append(&quot;&lt;b&gt;Hello&lt;&#x2F;b&gt;&quot;);</span><br><span class="line">&#x2F;&#x2F;头部添加</span><br></pre></td></tr></table></figure></div>
+
+<p>prepend(content)：向每个匹配的元素内部前置内容。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).prepend(&quot;&lt;b&gt;Hello&lt;&#x2F;b&gt;&quot;);</span><br><span class="line">&#x2F;&#x2F;尾部添加</span><br></pre></td></tr></table></figure></div>
+
+<p>appendTo(content):把所有匹配的元素追加到另一个指定的元素元素集合中。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;&#x2F;div&gt;&lt;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&#x2F;&#x2F;新建段落追加到每一个div中 尾部追加</span><br><span class="line">$(&quot;&lt;p&#x2F;&gt;&quot;).appendTo(&quot;div&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="外部插入操作"><a href="#外部插入操作" class="headerlink" title="外部插入操作"></a>外部插入操作</h6><p>after(content)：在每个匹配的元素之后插入内容。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).after(&quot;&lt;b&gt;Hello&lt;&#x2F;b&gt;&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<p>before(content)：在每个匹配的元素之前插入内容。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).before(&quot;&lt;b&gt;Hello&lt;&#x2F;b&gt;&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="替换操作"><a href="#替换操作" class="headerlink" title="替换操作"></a>替换操作</h6><p>replaceWith(content)：将所有匹配的元素替换成指定的 HTML 或 DOM 元素。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).replaceWith(&quot;&lt;h2&gt;888&lt;&#x2F;h2&gt;&quot;);</span><br><span class="line">&#x2F;&#x2F;把所有的段落标记替换成标题。</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h6><p>empty()：删除匹配的元素集合中所有的子节点。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Hello,&lt;span&gt;Person&lt;&#x2F;span&gt; &lt;a href&#x3D;&quot;#&quot;&gt;and person&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;</span><br><span class="line">$(&quot;p&quot;).empty();</span><br></pre></td></tr></table></figure></div>
+
+<p>remove([expr])：从 DOM 中删除所有匹配的元素。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;p&quot;).remove();</span><br><span class="line">&#x2F;&#x2F;从DOM中把带有hello类的段落删除</span><br><span class="line">$(&quot;p&quot;).remove(&quot;.hello&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="复制操作"><a href="#复制操作" class="headerlink" title="复制操作"></a>复制操作</h6><p>clone(Even])：克隆匹配的 DOM 元素并且选中这些克隆的副本。<br>even：一个布尔值（true 或者 false）指示事件处理函数是否会被复制。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;b&gt;Hello&lt;&#x2F;b&gt;&lt;p&gt;, how are you?&lt;&#x2F;p&gt;</span><br><span class="line">$(&quot;b&quot;).clone().prependTo(&quot;p&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h6><p>页面载入事件：<br>ready(fn)：当 DOM 载入就绪可以查询及操纵时绑定一个要执行的函数。这是事件模块中最重要的一个函数，因为它可以极大地提高 web 应用程序的响应速度。简单地说，这个方法纯粹是对向 window.onload 事件注册事件的替代方法。<br>绑定事件：<br>bind(type,fn)：为每个匹配元素的特定事件绑定事件处理函数。<br>unbind(type,[fn]])：bind()的反向操作，从每一个匹配的元素中删除绑定的事件。如果没有参数，则删除所有绑定的事件。<br>hover([over,]out)：当鼠标移动到一个匹配的元素上面时，会触发指定的第一个函数。当鼠标移出这个元素时，会触发指定的第二个函数。<br>click(fn)：触发每一个匹配元素的 click 事件。这个函数会调用执行绑定到 click 事件的所有函数。<br>注：其他事件方法使用方式一样。例如：mouseover、mouseout、dblclick、change、blur、focus、keydown、keyup、keypress、mousedown、mouseup、mousemove、mouseenter、mouseleave、resize、scroll、select、submit、unload 等。<br>on(event,[selector],fn)：在选择元素上绑定一个事件的事件处理函数。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;直接给p绑定事件</span><br><span class="line">$(&quot;p&quot;).on(&quot;click&quot;, function()&#123;</span><br><span class="line">    alert( $(this).text() );</span><br><span class="line">&#125;);</span><br><span class="line">&#x2F;&#x2F;如果第二个参数传入一个选择器，就是监听父元素中li的点击事件，相当于 事件委托！</span><br><span class="line">$(&#39;ul&#39;).on(&#39;click&#39;,&#39;li&#39;,function()&#123;</span><br><span class="line">                console.log(11)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>off(event,[selector],[fn])：在选择元素上移除一个事件的事件处理函数</p>
+<h6 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h6><p>jQuery.ajax(settings)：通过 HTTP 请求加载远程数据，返回其创建的 XHR 对象。<br>Settings:<br>async：Boolean 类型。默认为 true（异步）。<br>contentType：string 类型。默认为 application/x-www-form-urlencoded，发送信息至服务器时内容编码类型。<br>timeout：设置请求超时时间（毫秒）。<br>type：请求方式（GET 或 POST），默认为 GET。<br>url：默认当前页地址，发送请求的地址。<br>data：object/string 类型。发送到服务器的数据。<br>error：在请求出错时调用。传入 XHR 对象，描述错误类型的字符串<br>success：当请求成功之后调用，传入返回后的数据，以及包含成功代码的字符串。</p>
+<h6 id="Get-请求"><a href="#Get-请求" class="headerlink" title="Get 请求"></a>Get 请求</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var url &#x3D; &#39;https:&#x2F;&#x2F;api.readhub.me&#x2F;topic?lastCursor&#x3D;7544&amp;pageSize&#x3D;10&#39;</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url:url,</span><br><span class="line">    type:&#39;get&#39;,</span><br><span class="line">    success:function (res) &#123;</span><br><span class="line"></span><br><span class="line">        console.log(res)</span><br><span class="line">        &#125;,</span><br><span class="line">        error:function (error) &#123;</span><br><span class="line">            console.log(error);</span><br><span class="line">                &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="Get-请求-2"><a href="#Get-请求-2" class="headerlink" title="Get 请求 2"></a>Get 请求 2</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var data &#x3D; &#123;lastCursor:7544,pageSize:10&#125;</span><br><span class="line">           var url &#x3D; &#39;https:&#x2F;&#x2F;api.readhub.me&#x2F;topic&#39;</span><br><span class="line">           $.ajax(&#123;</span><br><span class="line">               url:url,</span><br><span class="line">               type:&#39;get&#39;,</span><br><span class="line">               data:data ,&#x2F;&#x2F;设置参数</span><br><span class="line">               success:function (res) &#123;</span><br><span class="line">                   console.log(res)</span><br><span class="line">               &#125;,</span><br><span class="line">               error:function (error) &#123;</span><br><span class="line">                   console.log(error);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;);;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="post-请求"><a href="#post-请求" class="headerlink" title="post 请求"></a>post 请求</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var data &#x3D; &#123;lastCursor:7544,pageSize:10&#125;</span><br><span class="line">            var url &#x3D; &#39;https:&#x2F;&#x2F;api.readhub.me&#x2F;topic&#39;</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                url:url,</span><br><span class="line">                type:&#39;post&#39;,</span><br><span class="line">                data:data ,&#x2F;&#x2F;设置参数</span><br><span class="line">                success:function (res) &#123;</span><br><span class="line">                    console.log(res);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                &#125;,</span><br><span class="line">                error:function (error) &#123;</span><br><span class="line">                    console.log(error);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="jsonP-请求"><a href="#jsonP-请求" class="headerlink" title="jsonP 请求"></a>jsonP 请求</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var url1 &#x3D; &#39;https:&#x2F;&#x2F;sp0.baidu.com&#x2F;5a1Fazu8AA54nxGko9WTAnF6hhy&#x2F;su?wd&#x3D;n&#39;</span><br><span class="line">            &#x2F;&#x2F;jsonp 接口 必须 两个字段  dataType:&#39;jsonp&#39;， jsonp:cb（回调函数字段）</span><br><span class="line">&#x2F;&#x2F;jq会自动生成回调函数   &#x2F;&#x2F;&amp;cb&#x3D;jQuery1102045621865612995216_1498111113677</span><br><span class="line">            $.ajax(&#123;</span><br><span class="line">                url:url1,</span><br><span class="line">                dataType:&#39;jsonp&#39;,</span><br><span class="line">                jsonp:&#39;cb&#39;,</span><br><span class="line">                success:function (res) &#123;</span><br><span class="line">                    console.log(res)</span><br><span class="line">                &#125;,</span><br><span class="line">                error:function (error) &#123;</span><br><span class="line">                    console.log(error)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="快捷请求函数"><a href="#快捷请求函数" class="headerlink" title="快捷请求函数"></a>快捷请求函数</h6><p>$.getJSON(url, [data], [callback])：通过 HTTP GET 请求获取 JSON 数据。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var data &#x3D; &#123;lastCursor:7544,pageSize:10&#125;</span><br><span class="line">       var url &#x3D; &#39;https:&#x2F;&#x2F;api.readhub.me&#x2F;topic&#39;</span><br><span class="line">        $.getJSON(url,data,function (res) &#123;</span><br><span class="line">            console.log(res);</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>也可以通过使用 JSONP 形式的回调函数来加载其他网站的数据。如：”myulr?cb=?”，jQuery 会自动替换 ? 为正确的函数名，以执行回调函数。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;jsonp 请求 ，注意cb&#x3D;？，？号，jq会自动生成回调函数</span><br><span class="line">        $.getJSON(&#39;https:&#x2F;&#x2F;sp0.baidu.com&#x2F;5a1Fazu8AA54nxGko9WTAnF6hhy&#x2F;su?wd&#x3D;n&amp;cb&#x3D;?&#39;,function (res) &#123;</span><br><span class="line">            console.log(res,&#39;jsonp&#39;);</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="jQuery-插件参考网址"><a href="#jQuery-插件参考网址" class="headerlink" title="jQuery 插件参考网址"></a>jQuery 插件参考网址</h4><p>jQuery 之家<a target="_blank" rel="noopener" href="http://www.htmleaf.com/">http://www.htmleaf.com/</a><br>jQuery 插件库<a target="_blank" rel="noopener" href="https://www.jq22.com/">https://www.jq22.com/</a></p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%BA%8C/">jQuery 的一些基本内容（二）</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/05/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            循环语句
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/03/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">jQuery一些基本内容(一)</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

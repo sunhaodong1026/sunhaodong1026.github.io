@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>jQuery一些基本内容(一) | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="什么是 jQuery  jQuery 是一个兼容多浏览器的 js 库，核心理念是”write less,do more”j 代表 javascript,Query 就是查询的意思，这样理解来也通俗易懂，jQuery 是免费并且开源的。它可以简化查询 DOM 对象，处理事件，制作动画，处理 Ajax 交互过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery一些基本内容(一)">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%B8%80/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="什么是 jQuery  jQuery 是一个兼容多浏览器的 js 库，核心理念是”write less,do more”j 代表 javascript,Query 就是查询的意思，这样理解来也通俗易懂，jQuery 是免费并且开源的。它可以简化查询 DOM 对象，处理事件，制作动画，处理 Ajax 交互过程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-03T09:40:31.000Z">
+<meta property="article:modified_time" content="2020-10-06T03:02:27.316Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="jQuery">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-jQuery一些基本内容-一"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery一些基本内容(一)
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/09/03/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%B8%80/" class="article-date">
+  <time datetime="2020-09-03T09:40:31.000Z" itemprop="datePublished">2020-09-03</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <blockquote>
+<p>什么是 jQuery</p>
+</blockquote>
+<p>jQuery 是一个兼容多浏览器的 js 库，核心理念是”write less,do more”<br>j 代表 javascript,Query 就是查询的意思，这样理解来也通俗易懂，jQuery 是免费并且开源的。它可以简化查询 DOM 对象，处理事件，制作动画，处理 Ajax 交互过程。</p>
+<a id="more"></a>
+
+<p>简单来说，就是当初的原生 js 并不太好用，就有程序员把原生 js 封装了一下，就有了 jQuery。<br>所以 jQuery 中的大部分语法都可以参照原生 JS，就是用了一些封装的方法实现了一些原生 JS 中比较复杂的功能。<br>现在 jQuery 的流行程度已经大不如前，部分网站还在使用一些老版本的 jQuery 库还是因为老版本的 jQuery 兼容低版本的 ie 浏览其更加方便，jQuery 的官网已经更新到了 3.4 多的版本，现版本的 jQuery 已经完全不兼容低版本的 ie 浏览器了。</p>
+<blockquote>
+<p>jQuery 的使用</p>
+</blockquote>
+<p>使用 jQuery 的话，引入就可以了，可以下载官方文档，也可以直接引入接口</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;jquery-1.11.3.min.js&quot; type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">#或者</span><br><span class="line"> &lt;script src&#x3D;&quot;http:&#x2F;&#x2F;libs.baidu.com&#x2F;jquery&#x2F;2.0.0&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>引入官方文档的话，最好引入压缩过的，例如带 min 后缀的，一是文件更小，加载快，一是代码经过加密。(都开源了，加密不加密没区别吧。。)</p>
+<blockquote>
+<p>jQuery 选择器</p>
+</blockquote>
+<p>选择器是 jQuery 最核心的内容，大大简化了对 DOM 的查询操作。<br>css1-css3 的选择器都可以当做$函数的参数。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#box&#39;)    # ID选择器</span><br><span class="line">$(&#39;.box&#39;)    # 类名选择器</span><br><span class="line">$(&#39;div&#39;)     # 标签选择器</span><br><span class="line">$(&#39;*&#39;)       # 通配符选择器</span><br><span class="line">$(&#39;div,p,a&#39;) # 群组选择器</span><br><span class="line">$(&#39;#box p&#39;)  # 后代选择器</span><br></pre></td></tr></table></figure></div>
+
+<p>此处的$在jQuery的官方文档中就是封装的jQuery函数，即为把$替换成 jQuery 的作用是相同的，但是$写起来更加方便。<br>$函数的作用在原生 JS 中就相当于是 document.querySlectorAll()<br>所以$函数返回的一直是一个数组。通过下标可以获得其中的元素。<br>可以通过打印来对比：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log($(&#39;#box&#39;));</span><br><span class="line">console.log($(&#39;#box&#39;)[0]);</span><br></pre></td></tr></table></figure></div>
+
+<br/>
+
+<blockquote>
+<p>jQuery 操作 DOM 属性</p>
+</blockquote>
+<h6 id="操作属性"><a href="#操作属性" class="headerlink" title="操作属性"></a>操作属性</h6><p>设置被选中元素的属性值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).attr(&#39;name&#39;,&#39;test1&#39;)    #为类名为box的全部元素设置name属性，属性值为test1</span><br></pre></td></tr></table></figure></div>
+
+<p>返回被选中元素的属性值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).attr(&#39;name&#39;)   #返回第一个类名为box的元素的name属性的值</span><br></pre></td></tr></table></figure></div>
+
+<p>此处设置属性的值是为所有元素设置，而获取只能获取到第一个元素的。<br>从所有匹配到的元素中删除该属性</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).removeAttr(&#39;name&#39;)    #删除类名为box的所有元素的name属性</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="操作-class"><a href="#操作-class" class="headerlink" title="操作 class"></a>操作 class</h6><p>操作类名：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).addClass(&#39;item&#39;)    # 为所有匹配到的元素添加指定的class名</span><br><span class="line"></span><br><span class="line">$(&#39;.box&#39;).removeClass(&#39;item&#39;) # 从所有匹配到的元素中删除指定的class名</span><br><span class="line"></span><br><span class="line">$(&#39;.box&#39;).toggleClass(&#39;item&#39;) # 如果存在就删除，如果不存在就添加</span><br></pre></td></tr></table></figure></div>
+
+<p>多次添加 class 名不会覆盖，而是会累加，同名的不会累加</p>
+<h6 id="操作-css"><a href="#操作-css" class="headerlink" title="操作 css"></a>操作 css</h6><p>jQuery 中的方法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).css(&#39;width&#39;,100)   # 将类名为box的所有元素的宽度设置为100</span><br><span class="line"></span><br><span class="line">$(&#39;.box&#39;).css(&#39;width&#39;)       # 获取第一个类名为box的元素的宽度的值</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="操作内容"><a href="#操作内容" class="headerlink" title="操作内容"></a>操作内容</h6><p>jQuery 中的方法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).html()      # 获取元素的html内容</span><br><span class="line">$(&#39;.box&#39;).html(&#39;aaa&#39;) # 设置元素的html内容</span><br><span class="line"></span><br><span class="line">$(&#39;.box&#39;).text()      # 获取元素的text内容</span><br><span class="line">$(&#39;.box&#39;).text(&#39;aaa&#39;) # 设置元素的text内容</span><br><span class="line"></span><br><span class="line">$(&#39;.box&#39;).val()       # 获取输入框的内容</span><br><span class="line">$(&#39;.box&#39;).val(&#39;aaa&#39;)  # 设置输入框的内容</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="操作尺寸"><a href="#操作尺寸" class="headerlink" title="操作尺寸"></a>操作尺寸</h6><p>jQuery 中的方法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;.box&#39;).</span><br></pre></td></tr></table></figure></div>
+
+<p>height([val])：取得匹配元素当前计算的高度值（px）。<br>width([val])：取得第一个匹配元素当前计算的宽度值（px）。<br>innerHeight()：获取第一个匹配元素内部区域高度（包括补白、不包括边框）。此方法对可见和隐藏元素均有效。<br>innerWidth()：获取第一个匹配元素内部区域宽度（包括补白、不包括边框）。此方法对可见和隐藏元素均有效。<br>outerHeight()：获取第一个匹配元素外部高度（默认包括补白和边框）。此方法对可见和隐藏元素均有效。<br>outerWidth()：获取第一个匹配元素外部宽度（默认包括补白和边框）。此方法对可见和隐藏元素均有效。</p>
+<p>offset([coordinates])：获取匹配元素在当前视口的相对偏移。返回的对象包含两个整型属性：top 和 left，以像素计。方法只对可见元素有效。<br>position()：获取匹配元素相对父元素的偏移。返回的对象包含两个整型属性：top 和 left。此方法只对可见元素有效。</p>
+<blockquote>
+<p>jQuery 动画</p>
+</blockquote>
+<p>show([speed, [easing], [callback]])：显示隐藏的匹配元素。<br>hide([speed, [easing], [callback]])：隐藏显示的元素。<br>toggle([speed, [easing], [callback]])：如果元素是可见的，切换为隐藏的，如果元素是隐藏的，切换为可见的。<br>speed：三种预定速度的字符串（slow、normal、fast）或者动画时长的毫秒数值。<br>easing：指定切换效果，默认是 swing，可用 linear。<br>callback：在动画完成时执行的函数，每个元素执行一次。<br>运动过程中：改变 width、height、margin、padding、opacity 属性值。</p>
+<p>slideDown([speed, [easing], [callback]])：通过高度变化（向下增大）来动态的显示所有匹配的元素，显示完成后可选的触发一个回调函数。<br>slideUp([speed, [easing], [callback]])：通过高度变化（向上减小）来动态的隐藏所有匹配的元素，隐藏完成后可选的触发一个回调函数。<br>slideToggle([speed, [easing], [callback]])：通过高度变化来切换所有匹配元素的可见性，切换完成后可选的触发一个回调函数。<br>speed：三种预定速度的字符串（slow、normal、fast）或者动画时长的毫秒数值。<br>easing：指定切换效果，默认是 swing，可用 linear。<br>callback：在动画完成时执行的函数，每个元素执行一次。<br>运动过程中：改变 height、margin-top、margin-bottom、padding-top、padding-bottom 属性值。</p>
+<p>fadeIn([speed, [easing], [callback]])：通过不透明度的变化来实现所有匹配元素的淡入效果，动画完成后可选的触发一个回调函数。<br>fadeOut([speed, [easing], [callback]])：通过不透明度的变化来实现所有匹配元素的淡出效果，动画完成后可选的触发一个回调函数。<br>fadeTo([speed, opacity, [easing], [callback]])：把所有匹配元素的不透明度以渐进方式调整到指定的不透明度，动画完成后可选的触发一个回调函数。opacity：一个 0 到 1 之间表示透明度的数字。<br>fadeToggle([speed, [easing], [callback]])：通过不透明度的变化来开关所有匹配元素的淡入淡出效果，动画完成后可选的触发一个回调函数。<br>speed：三种预定速度的字符串（slow、normal、fast）或者动画时长的毫秒数值。<br>easing：指定切换效果，默认是 swing，可用 linear。<br>callback：在动画完成时执行的函数，每个元素执行一次。<br>注：fadeIn、fadeout、fadeToggle，运动过程中修改 opacity 属性值，最终只修改 display 属性值。而 fadeTo 只修改 opacity 属性值。</p>
+<p>animate(params, [speed], [easing], [fn])：用于创建自定义动画的函数。<br>params：一组包含作为动画属性和终值的样式属性和及其值的集合。<br>speed：三种预定速度的字符串（slow、normal、fast）或者动画时长的毫秒数值。<br>easing：指定切换效果，默认是 swing，可用 linear。<br>fn：在动画完成时执行的函数，每个元素执行一次。</p>
+<p>stop(clearQueue, [jumpToEnd])：停止所有在指定元素上正在运行的动画。<br>如果 clearQueue 没有设置为 true，并且队列中有等待执行的动画，他们将马上执行。<br>clearQueue：如果同一元素调用多个动画方法，尚未被执行的动画被放置在元素的效果队列中。这些动画不会开始，直到第一个完成。调用 stop()的时候，队列中的下一个动画开始。如果 clearQueue 参数为 true，那么在队列中的动画其余被删除并永远不会被执行。<br>jumpToEnd：当前动画将停止，但该元素上的 CSS 属性会被立刻修改成动画的目标值。</p>
+<p>delay(duration)：设置一个延时来推迟执行队列中之后的项目。<br>duration：延迟时间，单位：毫秒。</p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%B8%80/">jQuery 的一些基本内容（一）</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/03/jQuery%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9-%E4%BA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            jQuery一些基本内容(二)
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/09/02/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%92%8C%E7%B2%BE%E7%81%B5%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">浏览器兼容和精灵图</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

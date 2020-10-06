@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>CSS核心属性(二) | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="CSS3 渐变线性渐变（Linear Gradient）- 向下&#x2F;向上&#x2F;向左&#x2F;向右&#x2F;对角方向径向渐变（Radial Gradient）- 由它们的中心定义repeating-linear-gradient() 函数用于重复线性渐变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS核心属性(二)">
+<meta property="og:url" content="http://yoursite.com/2020/08/29/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7-%E4%BA%8C/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="CSS3 渐变线性渐变（Linear Gradient）- 向下&#x2F;向上&#x2F;向左&#x2F;向右&#x2F;对角方向径向渐变（Radial Gradient）- 由它们的中心定义repeating-linear-gradient() 函数用于重复线性渐变">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-29T03:57:55.000Z">
+<meta property="article:modified_time" content="2020-10-06T02:58:53.983Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="2D转换">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-CSS核心属性-二"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      CSS核心属性(二)
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/08/29/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7-%E4%BA%8C/" class="article-date">
+  <time datetime="2020-08-29T03:57:55.000Z" itemprop="datePublished">2020-08-29</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="CSS3-渐变"><a href="#CSS3-渐变" class="headerlink" title="CSS3 渐变"></a>CSS3 渐变</h4><p>线性渐变（Linear Gradient）- 向下/向上/向左/向右/对角方向<br>径向渐变（Radial Gradient）- 由它们的中心定义<br>repeating-linear-gradient() 函数用于重复线性渐变</p>
+<a id="more"></a>
+
+<p><strong>线性渐变</strong> （默认从上向下）</p>
+<ol>
+<li><code>background: linear-gradient(red, blue);</code> 基本的渐变，默认从上向下</li>
+<li><code>background: linear-gradient(to right, red , blue);</code> 从左向右的渐变</li>
+<li><code>background: linear-gradient(to bottom right, red , blue);</code>从左上角到右下角/</li>
+<li><code>background: linear-gradient(180deg, red, blue);</code>带有指定角度的渐变</li>
+<li><code>background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));</code>使用透明色渐变</li>
+</ol>
+<p>transparent 透明色</p>
+<p><strong>百分比渐变</strong>:</p>
+<ol>
+<li>渐变过渡区的占比为总的空间（高度或宽度）减去上下两个着色块空间占比剩下的空间。<br><code>background:linear-gradient(red,orange)</code></li>
+<li>如果前面有比当前的颜色值百分比大的，会自动将当前颜色值的百分比设置为前面颜色中的最大百分比值<br>例：<br><code>background:linear-gradient(red 0%, red 14.3%, orange 0, orange 28.6%, yellow 0, yellow 42.9%, green 0, green 57.2%, blue 0, blue 71.5%, indigo 0, indigo 85.8%, violet 0, violet 100% );</code><br><code>background:linear-gradient( red 0%, orange 16.67%, yellow 33.33%, green 50%, blue 66.67%, indigo 83.33%, violet 100% );</code></li>
+</ol>
+<p><strong>重复的线性渐变</strong><br><code>background: repeating-linear-gradient(red,yellow 10%, green 20%);</code></p>
+<p><strong>径向渐变</strong></p>
+<ol>
+<li><code>background: radial-gradient(red, green, blue);</code>颜色结点均匀分布的径向渐变：</li>
+<li><code>background: radial-gradient(red 5%, green 15%, blue 60%);</code> 颜色节点分布不均匀</li>
+<li><code>background: repeating-radial-gradient(red, yellow 10%, green 15%);</code> 重复的径向渐变</li>
+</ol>
+<p>设置形状<br>shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形。默认值是 ellipse。</p>
+<p>形状为圆形的径向渐变：<br>background: radial-gradient(circle, red, yellow, green);</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaohuochai/p/5383285.html">深入理解径向渐变</a></p>
+<h4 id="CSS3-变形-2D-转换"><a href="#CSS3-变形-2D-转换" class="headerlink" title="CSS3 变形(2D 转换)"></a>CSS3 变形(2D 转换)</h4><p>css3 中 transform 可以实现文字或图像的旋转（rotate）、缩放(scale)、倾斜(skew)、移动(translate)的变形效果。<br>  旋转、缩放、倾斜和移动，这四种变形效果进行结合使用，并且使用的先后顺序不同，页面显示的结果会有区别。</p>
+<p>使用语法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">transform:功能;</span><br><span class="line">-ms-transform:功能; &#x2F;* IE 9 *&#x2F;</span><br><span class="line">-moz-transform:功能; &#x2F;* Firefox *&#x2F;</span><br><span class="line">-webkit-transform:功能; &#x2F;* Safari 和 Chrome *&#x2F;</span><br><span class="line">-o-transform:功能; &#x2F;* Opera *&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li>移动<br>translateX(n) translateY(n) 沿着 X 或 Y 轴移动元素。<br>translate(x,y) 沿着 X 和 Y 轴移动元素。<br>实例：</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*值 translate(50px,100px) 把元素从左侧移动 50 像素，从顶端移动 100 像素。*/</span></span><br><span class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>);</span><br><span class="line"><span class="attribute">-ms-transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>);        <span class="comment">/* IE 9 */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>); <span class="comment">/* Safari and Chrome */</span></span><br><span class="line"><span class="attribute">-o-transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>);        <span class="comment">/* Opera */</span></span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>);     <span class="comment">/* Firefox */</span>&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>缩放<br>scaleX(n) scaleY(n) 改变元素的宽或高度。<br>scale(x,y) 改变元素的宽度和高度。<br>实例：</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。*/</span></span><br><span class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">4</span>);</span><br><span class="line"><span class="attribute">-ms-transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">4</span>);    <span class="comment">/* IE 9 */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">4</span>);    <span class="comment">/* Safari 和 Chrome */</span></span><br><span class="line"><span class="attribute">-o-transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">4</span>);    <span class="comment">/* Opera */</span></span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">scale</span>(<span class="number">2</span>,<span class="number">4</span>);    <span class="comment">/* Firefox */</span>&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ol start="3">
+<li>定义 2D 旋转<br>rotate(angle)<br>在参数中规定角度。turn 是圈，1turn = 360deg；另外还有弧度 rad，2πrad = 1turn = 360deg。如，<br><code>transform:rotate(2turn);</code> 旋转两圈<br>实例：</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*值 rotate(30deg) 把元素顺时针旋转 30 度。*/</span></span><br><span class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);</span><br><span class="line"><span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);        <span class="comment">/* IE 9 */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);    <span class="comment">/* Safari and Chrome */</span></span><br><span class="line"><span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);        <span class="comment">/* Opera */</span></span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);        <span class="comment">/* Firefox */</span>&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>关于旋转 rotate；改变旋转中心点：<code>transform-origin: left top</code></p>
+<ol start="4">
+<li>倾斜<br>skewX(angle) skewY(angle) 沿着 X 或 Y 轴倾斜。<br>skew(x-angle,y-angle) 沿着 X 和 Y 轴倾斜。<br>实例：</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*值 skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度。*/</span></span><br><span class="line"><span class="selector-tag">div</span>&#123;<span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>);</span><br><span class="line"><span class="attribute">-ms-transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>);    <span class="comment">/* IE 9 */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>);    <span class="comment">/* Safari and Chrome */</span></span><br><span class="line"><span class="attribute">-o-transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>);    <span class="comment">/* Opera */</span></span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">skew</span>(<span class="number">30deg</span>,<span class="number">20deg</span>);    <span class="comment">/* Firefox */</span>&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="CSS3-过渡"><a href="#CSS3-过渡" class="headerlink" title="CSS3 过渡"></a>CSS3 过渡</h4><p>transition 属性的使用方法：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">transition:语法;</span><br><span class="line">-moz-transition: 语法; &#x2F;* Firefox 4 *&#x2F;</span><br><span class="line">-webkit-transition:语法; &#x2F;* Safari 和 Chrome *&#x2F;</span><br><span class="line">-o-transition:语法; &#x2F;* Opera *&#x2F;</span><br></pre></td></tr></table></figure></div>
+
+<p>css3 中 transition 允许 css 的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变 CSS 的属性值。</p>
+<p>语法：<br>transition: property duration timing-function delay ;</p>
+<ol>
+<li>执行变换的属性：<code>transition-property</code>，属性规定应用过渡效果的 CSS 属性的名称。（当指定的 CSS 属性改变时，过渡效果将开始）<br>  值有三个类型：<br>    A、none 没有属性会获得过渡效果。<br>    B、all 所有属性都将获得过渡效果。<br>    C、property 定义应用过渡效果的 CSS 属性名称列表，列表以逗号分隔。</li>
+<li>变换延续的时间：<code>transition-duration</code>；<br>  规定完成过渡效果需要花费的时间（以秒或毫秒计），默认值 0 没有效果</li>
+<li>在延续时间段，变换的速率变化 transition-timing-function；<br>  值：<br>    A、ease：（逐渐变慢）默认值，ease 函数等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0).<br>    B、linear：（匀速），linear 函数等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0).<br>    C、ease-in：(加速)，ease-in 函数等同于贝塞尔曲线(0.42, 0, 1.0, 1.0).<br>    D、ease-out：（减速），ease-out 函数等同于贝塞尔曲线(0, 0, 0.58, 1.0).<br>    E、ease-in-out：（加速然后减速），ease-in-out 函数等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)<br>    F、cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。</li>
+</ol>
+<h4 id="CSS3-滤镜"><a href="#CSS3-滤镜" class="headerlink" title="CSS3 滤镜"></a>CSS3 滤镜</h4><p>Css3 里的滤镜：将图片转换成灰度图片<br><code>-webkit-filter: grayscale(100%);</code></p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7-%E4%BA%8C/">CSS 核心属性(二)</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/29/%E6%95%B0%E7%BB%84/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            数组
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/28/CSS%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">CSS核心属性</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

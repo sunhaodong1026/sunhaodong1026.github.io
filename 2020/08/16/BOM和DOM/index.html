@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>BOM和DOM | 一只野生程序孙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="BOMBOM 的概念提供了独立于页面内容而与浏览器进行交互的对象，其核心对象是 window在浏览器中，window 对象（注意，w 为小写）指当前的浏览器窗口。它也是所有对象的顶层对象。“顶层对象”指的是最高一层的对象，所有其他对象都是它的下属。JavaScript 规定，浏览器环境的所有全局变量，都是 window 对象的属性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BOM和DOM">
+<meta property="og:url" content="http://yoursite.com/2020/08/16/BOM%E5%92%8CDOM/index.html">
+<meta property="og:site_name" content="一只野生程序孙">
+<meta property="og:description" content="BOMBOM 的概念提供了独立于页面内容而与浏览器进行交互的对象，其核心对象是 window在浏览器中，window 对象（注意，w 为小写）指当前的浏览器窗口。它也是所有对象的顶层对象。“顶层对象”指的是最高一层的对象，所有其他对象都是它的下属。JavaScript 规定，浏览器环境的所有全局变量，都是 window 对象的属性。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-10-06T02:55:58.894Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="BOM">
+<meta property="article:tag" content="DOM">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一只野生程序孙" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/icon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article
+  id="post-BOM和DOM"
+  class="article global-container article-type-post"
+  itemscope
+  itemprop="blogPost"
+>
+  
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      BOM和DOM
+    </h1>
+  
+
+  </header>
+  
+  <div class="article-meta">
+    <a href="/2020/08/16/BOM%E5%92%8CDOM/" class="article-date">
+  <time datetime="2020-08-15T16:00:00.000Z" itemprop="datePublished">2020-08-16</time>
+</a>
+     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+  </div>
+  
+  <span id="busuanzi_container_page_pv">
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+  
+
+  <div class="article-inner">
+    
+    <div
+      class="article-content article-content-cloud"
+      itemprop="articleBody"
+    >
+       <h4 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h4><p><strong>BOM 的概念</strong><br>提供了独立于页面内容而与浏览器进行交互的对象，其核心对象是 window<br>在浏览器中，window 对象（注意，w 为小写）指当前的浏览器窗口。它也是所有对象的顶层对象。<br>“顶层对象”指的是最高一层的对象，所有其他对象都是它的下属。JavaScript 规定，浏览器环境的所有全局变量，都是 window 对象的属性。</p>
+<a id="more"></a>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">window</span>.a; <span class="comment">// 1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，变量 a 是一个全局变量，但是实质上它是 window 对象的属性。声明一个全局变量，就是为 window 对象的同名属性赋值</p>
+<p>浏览器代理检测，可以检测出来用户使用的浏览器类型，也可以检测浏览器所在的操作系统<br>navigator.userAgent<br>判断浏览器类型</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> t = navigator.userAgent;</span><br><span class="line"><span class="keyword">if</span> (t.indexOf(<span class="string">&quot;Trident&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;ie内核&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (t.indexOf(<span class="string">&quot;Presto&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;欧朋&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (t.indexOf(<span class="string">&quot;Chrome&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;chrome &quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (t.indexOf(<span class="string">&quot;Safari&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Safari &quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;其他&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>判断是移动端还是 PC（重要）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//移动端</span></span><br><span class="line"><span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();</span><br><span class="line"><span class="keyword">if</span> (ua.indexOf(<span class="string">&quot;mobi&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="comment">// 手机浏览器</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;手机&quot;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 非手机浏览器</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;非手机&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>并且判断是安卓还是苹果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();</span><br><span class="line"><span class="keyword">if</span> (ua.indexOf(<span class="string">&quot;mobi&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">  <span class="comment">// 手机浏览器</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;手机&quot;</span>);</span><br><span class="line">  <span class="keyword">if</span> (ua.indexOf(<span class="string">&quot;android&quot;</span>) != <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;移动端 安卓&quot;</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (</span><br><span class="line">    ua.indexOf(<span class="string">&quot;ipod&quot;</span>) != <span class="number">-1</span> ||</span><br><span class="line">    ua.indexOf(<span class="string">&quot;iphone&quot;</span>) != <span class="number">-1</span> ||</span><br><span class="line">    ua.indexOf(<span class="string">&quot;ipad&quot;</span>) != <span class="number">-1</span></span><br><span class="line">  ) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;移动端  苹果手机&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 非手机浏览器</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;非手机&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="location-对象"><a href="#location-对象" class="headerlink" title="location 对象"></a>location 对象</h6><p>location 对象包含有关当前 URL 的信息。<br>location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问。</p>
+<p>属性：hash、host、hostname、href、pathname、port、protocol、search<br>href：设置或返回完整的 URL。（常用）<br>hash：设置或返回从井号 (#) 开始的 URL（锚）。<br>search：设置或返回从问号 (?) 开始的 URL（查询部分？id=1&amp;name=abb）。（常用）</p>
+<p>host 设置或返回主机名和当前 URL 的端口号。<br>hostname 设置或返回当前 URL 的主机名。<br>pathname 设置或返回当前 URL 的路径部分。<br>port 设置或返回当前 URL 的端口号。<br>protocol 设置或返回当前 URL 的协议。</p>
+<p>location 对象<br>方法：<code>assign(url)</code>, <code>replace(url)</code> , <code>reload()</code><br><code>assign()</code> 加载新的文档。<br><code>reload()</code> 重新加载当前文档。<br><code>replace()</code> 用新的文档替换当前文档。</p>
+<p><code>window.open();</code><br>打开一个新的浏览器窗口。<br><code>window.close();</code><br>关闭浏览器窗口。</p>
+<p><code>alert(arg1)</code><br>显示带有一段消息和一个确认按钮的警告框。</p>
+<p><code>prompt(arg1,arg2)</code><br>显示可提示用户输入的对话框。</p>
+<p><code>confirm(arg1)</code> （偶尔）<br>显示带有一段消息以及确认按钮和取消按钮的对话框。</p>
+<h6 id="history-对象："><a href="#history-对象：" class="headerlink" title="history 对象："></a>history 对象：</h6><p>history 对象保存着用户上网的历史记录,从窗口被 打开的那一刻算起.<br>后退一页 <code>history.go(-1)</code> <code>history.back()</code><br>前进一页 <code>history.go(1)</code> <code>history.forward()</code><br>前进两页 <code>history.go(2)</code></p>
+<h6 id="window-onload"><a href="#window-onload" class="headerlink" title="window.onload"></a>window.onload</h6><p>load 事件发生在文档在浏览器窗口加载完毕时。window.onload 属性可以指定这个事件的回调函数。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;页面加载完毕&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="定时器和延时器"><a href="#定时器和延时器" class="headerlink" title="定时器和延时器"></a>定时器和延时器</h6><p>JavaScript 提供定时执行代码的功能，叫做定时器（timer），主要由 setTimeout()和 setInterval()这两个函数来完成。</p>
+<ol>
+<li>延时器<br>setTimeout 函数用来指定某个函数或某段代码，在多少毫秒之后执行。它返回一个整数，表示定时器的编号，以后可以用来取消这个定时器。<br>var timerId = setTimeout(func, delay);<br>上面代码中，setTimeout 函数接受两个参数，第一个参数 func 是将要推迟执行的函数名，第二个参数 delay 是推迟执行的毫秒数。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line"><span class="comment">//推迟执行</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>setInterval 函数的用法与 setTimeout 完全一致，区别仅仅在于 setInterval 指定某个任务每隔一段时间就执行一次，也就是无限次的定时执行。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timer = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，每隔 1000 毫秒就输出一个 2，会无限运行下去，直到关闭当前窗口。</p>
+<ol start="2">
+<li>清除定时器<br>setTimeout 和 setInterval 函数，都返回一个整数值，表示计数器编号。将该整数传入 clearTimeout 和 clearInterval 函数，就可以取消对应的定时器。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id1 = <span class="built_in">setTimeout</span>(f, <span class="number">1000</span>);</span><br><span class="line"><span class="keyword">var</span> id2 = <span class="built_in">setInterval</span>(f, <span class="number">1000</span>);</span><br><span class="line"><span class="built_in">clearTimeout</span>(id1);</span><br><span class="line"><span class="built_in">clearInterval</span>(id2);</span><br></pre></td></tr></table></figure></div>
+
+<p>上面代码中，回调函数 f 不会再执行了，因为两个定时器都被取消了。</p>
+<h6 id="window-onscroll"><a href="#window-onscroll" class="headerlink" title="window.onscroll"></a>window.onscroll</h6><p>可以监听页面的滚动</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onscroll = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;页面滚动&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<p>一旦页面滚动就会触发 onscroll 函数</p>
+<h4 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h4><h6 id="document-scrollingElement"><a href="#document-scrollingElement" class="headerlink" title="document.scrollingElement"></a>document.scrollingElement</h6><p>document.scrollingElement 属性返回文档的滚动元素。也就是说，当文档整体滚动时，到底是哪个元素在滚动。<br>这个属性返回的文档的根元素 document.documentElement（即<code>&lt;html&gt;</code>）。<br>获取可视区域距离页面顶部的距离<br>document.scrollingElement.scrollTop;<br>设置滚动条的距离页面顶面的距离<br>document.scrollingElement.scrollTop = 0<br>或者也可以像下面<br>获取</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scrollTop = <span class="built_in">document</span>.scrollingElement.scrollTop;</span><br><span class="line">scrollTop = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop;</span><br></pre></td></tr></table></figure></div>
+
+<p>设置</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.scrollTop  = <span class="number">0</span></span><br><span class="line"><span class="built_in">document</span>.body.scrollTop = <span class="number">0</span>；</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="DOM-的概念及作用"><a href="#DOM-的概念及作用" class="headerlink" title="DOM 的概念及作用"></a>DOM 的概念及作用</h6><p>DOM 是 JavaScript 操作网页的 api 接口，全称为“文档对象模型”（Document Object Model）。<br>它的作用是将网页转为一个 JavaScript 对象，从而可以用脚本进行各种操作（比如增删内容）。</p>
+<p>浏览器会根据 DOM 模型，将结构化文档（比如 HTML 和 XML）解析成一系列的节点，再由这些节点组成一个树状结构（DOM Tree）。所有的节点和最终的树状结构，都有规范的对外接口。</p>
+<p>DOM 只是一个接口规范，可以用各种语言实现。所以严格地说，DOM 不是 JavaScript 语法的一部分，但是 DOM 操作是 JavaScript 最常见的任务，离开了 DOM，JavaScript 就无法控制网页。另一方面，JavaScript 也是最常用于 DOM 操作的语言。后面介绍的就是 JavaScript 对 DOM 标准的实现和用法。<br>节点树<br>一个文档的所有节点，按照所在的层级，可以抽象成一种树状结构。这种树状结构就是 DOM 树。它有一个顶层节点，下一层都是顶层节点的子节点，然后子节点又有自己的子节点，就这样层层衍生出一个金字塔结构，倒过来就像一棵树。</p>
+<p>浏览器原生提供 document 节点，代表整个文档。</p>
+<h6 id="DOM-的基本操作-查询、创建、添加，修改，删除"><a href="#DOM-的基本操作-查询、创建、添加，修改，删除" class="headerlink" title="DOM 的基本操作(查询、创建、添加，修改，删除)"></a>DOM 的基本操作(查询、创建、添加，修改，删除)</h6><ol>
+<li><strong>document.getElementById</strong>方法返回匹配指定 id 属性的元素节点。如果没有发现匹配的节点，则返回 null。</li>
+<li><strong>document.getElementsByClassName</strong>方法返回一个类似数组的对象（HTMLCollection 实例），包括了所有 class 名字符合指定条件的元素</li>
+<li><strong>document.getElementsByTagName</strong>方法搜索 HTML 标签名，返回符合条件的元素。它的返回值是一个类似数组对象（HTMLCollection 实例）</li>
+<li><strong>document.querySelector</strong>方法接受一个 CSS 选择器作为参数，返回匹配该选择器的元素节点。如果有多个节点满足匹配条件，则返回第一个匹配的节点。如果没有发现匹配的节点，则返回 null。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el1 = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.myclass&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<ol start="5">
+<li><strong>document.querySelectorAll</strong>方法与 querySelector 用法类似，区别是返回一个 NodeList 对象，包含所有匹配给定选择器的节点。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">elementList = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;.myclass&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<ol start="6">
+<li><strong>document.createElement</strong>方法用来生成元素节点，并返回该节点。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">&quot;div&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p>createElement 方法的参数为元素的标签名，即元素节点的 tagName 属性，对于 HTML 网页大小写不敏感，即参数为 div 或 DIV 返回的是同一种节点</p>
+<ol start="7">
+<li>**oDiv.appendChild(newDiv);**把 newDiv 添加到 oDiv 内部的最后面<br><code>Element.innerHTML</code>属性返回一个字符串，等同于该元素包含的所有 HTML 代码。该属性可读写，常用来设置某个节点的内容。它能改写所有元素节点的内容，包括<code>&lt;HTML&gt;</code>和<code>&lt;body&gt;</code>元素。<br>如果将 innerHTML 属性设为空，等于删除所有它包含的所有节点。</li>
+<li><strong>box.replaceChild(newNode,oldNode)</strong></li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">&quot;mydiv&quot;</span>);</span><br><span class="line">el.remove();</span><br></pre></td></tr></table></figure></div>
+
+<h6 id="DOM-节点类型-元素和文本"><a href="#DOM-节点类型-元素和文本" class="headerlink" title="DOM 节点类型(元素和文本)"></a>DOM 节点类型(元素和文本)</h6><p>DOM 的最小组成单位叫做节点（node）。文档的树形结构（DOM 树），就是由各种不同类型的节点组成。每个节点可以看作是文档树的一片叶子。</p>
+<p>Element：网页的各种 HTML 标签（比如<code>&lt;body&gt;</code>、<code>&lt;a&gt;</code>等）</p>
+<p>Text：标签之间或标签包含的文本 （创建 Text）</p>
+<p>注释也是节点</p>
+<p>通过 nodeType 属性可以查看类型<br>如果节点是一个元素节点，nodeType 属性返回 1。<br>如果节点是属性节点, nodeType 属性返回 2。<br>如果节点是一个文本节点，nodeType 属性返回 3。<br>如果节点是一个注释节点，nodeType 属性返回 8</p>
+<p>文档碎片 document.createDocumentFragment() 作为容器使用，可以避免频繁操作 dom</p>
+<hr>
+<p>本文作者：一只野生程序孙<br>本文链接：<a target="_blank" rel="noopener" href="http://dxh98.cn/BOM%E5%92%8CDOM/">BOM 和 DOM</a></p>
+ 
+    </div>
+    
+    <footer class="article-footer">完</footer>
+    
+  </div>
+   
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/16/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            逻辑分支
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/08/15/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%87%A0%E7%A7%8D%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">弹性盒模型和几种布局方式</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+ <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+ 
+</article>
+</section>
+        <aside id="sidebar">
+   <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/Cat.jpg" title="特别耐撕的小前端"></img>
+    <h3 class="avatar-name">
+      
+        前 端 狗 — 东 子
+      
+    </h3>
+    <p class="avatar-slogan">
+      一 个 不 会 设 计 不 会 配 色 的 前 端 渣 渣
+    </p>
+  </div>
+</div>
+
+  
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2D%E8%BD%AC%E6%8D%A2/" rel="tag">2D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E8%BD%AC%E6%8D%A2/" rel="tag">3D转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFC/" rel="tag">BFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/" rel="tag">CSS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/" rel="tag">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM%E9%AB%98%E7%BA%A7/" rel="tag">DOM高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date/" rel="tag">Date</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES5/" rel="tag">ES5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/" rel="tag">ES6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/" rel="tag">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vuex/" rel="tag">Vuex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/localStorage/" rel="tag">localStorage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" rel="tag">元素类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" rel="tag">关键帧动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" rel="tag">响应式布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" rel="tag">多栏布局</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BD%8D/" rel="tag">定位</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" rel="tag">宽高自适应</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">弹性盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" rel="tag">循环语句</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99/" rel="tag">正则</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" rel="tag">注意点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" rel="tag">浏览器兼容</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" rel="tag">浏览器内核</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" rel="tag">盒模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" rel="tag">精灵图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" rel="tag">表单高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" rel="tag">表格高级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" rel="tag">逻辑分支</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" rel="tag">锚点跳转</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">面向对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag">项目开发</a></li></ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">3D转换</a> <a href="/tags/BFC/" style="font-size: 10px;">BFC</a> <a href="/tags/BOM/" style="font-size: 10px;">BOM</a> <a href="/tags/CSS/" style="font-size: 17.5px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/DOM/" style="font-size: 12.5px;">DOM</a> <a href="/tags/DOM%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">DOM高级</a> <a href="/tags/Date/" style="font-size: 10px;">Date</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/HTTP/" style="font-size: 10px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/React/" style="font-size: 12.5px;">React</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/Vuex/" style="font-size: 10px;">Vuex</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/localStorage/" style="font-size: 10px;">localStorage</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/%E4%BA%8B%E4%BB%B6/" style="font-size: 10px;">事件</a> <a href="/tags/%E5%85%83%E7%B4%A0%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">元素类型</a> <a href="/tags/%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/" style="font-size: 10px;">关键帧动画</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">响应式布局</a> <a href="/tags/%E5%A4%9A%E6%A0%8F%E5%B8%83%E5%B1%80/" style="font-size: 10px;">多栏布局</a> <a href="/tags/%E5%AE%9A%E4%BD%8D/" style="font-size: 10px;">定位</a> <a href="/tags/%E5%AE%BD%E9%AB%98%E8%87%AA%E9%80%82%E5%BA%94/" style="font-size: 10px;">宽高自适应</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">小程序</a> <a href="/tags/%E5%BC%B9%E6%80%A7%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">弹性盒模型</a> <a href="/tags/%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/" style="font-size: 10px;">循环语句</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%AD%A3%E5%88%99/" style="font-size: 10px;">正则</a> <a href="/tags/%E6%B3%A8%E6%84%8F%E7%82%B9/" style="font-size: 12.5px;">注意点</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/" style="font-size: 10px;">浏览器兼容</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" style="font-size: 10px;">浏览器内核</a> <a href="/tags/%E7%9B%92%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">盒模型</a> <a href="/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/" style="font-size: 10px;">精灵图</a> <a href="/tags/%E8%A1%A8%E5%8D%95%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表单高级</a> <a href="/tags/%E8%A1%A8%E6%A0%BC%E9%AB%98%E7%BA%A7/" style="font-size: 10px;">表格高级</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%88%86%E6%94%AF/" style="font-size: 10px;">逻辑分支</a> <a href="/tags/%E9%94%9A%E7%82%B9%E8%B7%B3%E8%BD%AC/" style="font-size: 10px;">锚点跳转</a> <a href="/tags/%E9%97%AD%E5%8C%85/" style="font-size: 10px;">闭包</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.5px;">随笔</a> <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">面向对象</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 12.5px;">项目开发</a>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+  
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/21/love/">Love</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%85%E5%AE%B9/">小程序开发中需要注意的一些内容</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/Vue%E4%B9%8B%E5%86%99%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84Todolist/">Vue之写一个简单的Todolist</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Evuex/">关于vuex</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/30/%E5%85%B3%E4%BA%8Eredux/">关于redux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+    <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/sunhaodong1026/sunhaodong1026.github.io" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+ 
+</aside>
+
+<iframe
+  style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: transparent;
+  "
+  allow="autoplay"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="150"
+  height="52"
+  src="//music.163.com/outchain/player?type=2&id=1336789984&auto=1&height=32&autoPlay=true"
+></iframe>
+
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
